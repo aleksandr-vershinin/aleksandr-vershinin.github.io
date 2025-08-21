@@ -1,0 +1,16 @@
+// components/_stars.scss
+@mixin stars {
+  display: flex;
+  align-items: center;
+  gap: var(--star-gap, 6px);
+
+  .star {
+    width: var(--star-size, 14px);
+    height: var(--star-size, 14px);
+    fill: #C0BDC8;
+
+    &--active {
+      fill: var(--star-active, #F4A623);
+    }
+  }
+}

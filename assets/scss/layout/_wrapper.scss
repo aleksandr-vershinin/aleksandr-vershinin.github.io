@@ -1,0 +1,22 @@
+:root { --container: 1360px; }
+
+/* центрируем и даём воздух */
+.wrapper{
+  --gutter-min: 32px;            /* телефоны */
+  --gutter-max: 280px;           /* на 1920: (1920 - 1360) / 2 */
+  padding-inline: clamp(
+          var(--gutter-min),
+          calc(50vw - (var(--container) / 2)),
+          var(--gutter-max)
+  );
+}
+
+/* чуть больше на мелких планшетах */
+@media (min-width: 600px){ .wrapper{ --gutter-min: 48px; } }
+
+/* как просил: от 768 не меньше 64px */
+@media (min-width: 768px){ .wrapper{ --gutter-min: 64px; } }
+
+/* ноутбуки: делаем «воздуха» столько, чтобы влезали стрелки сбоку */
+@media (min-width: 1280px){ .wrapper{ --gutter-min: 104px; } }
+/* почему 104? нужно >= (arrow + gap) ≈ 65.33 + 32 ≈ 97.33px */

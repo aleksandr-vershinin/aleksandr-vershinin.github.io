@@ -1,0 +1,24 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+@use "../components/form";
+
+.faq {
+  &__title {
+    font-size: clamp(2.5rem, 3vw, 4rem);
+    color: var(--color-text-primary, #2b2b2b);
+    line-height: 1.1;
+  }
+
+  &__content {
+    padding: 0 24px 20px;
+    color: var(--color-text-secondary, #595959);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* ===== FAQ Form (uses .form component) ===== */
+.faq-form {
+  margin-top: clamp(80px, 6.5vw, 130px);
+}
+

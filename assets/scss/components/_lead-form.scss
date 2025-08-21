@@ -1,0 +1,43 @@
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__inner {
+    flex-direction: column;
+  }
+
+  &__image img {
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__fields input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  button {
+    width: 300px;
+  }
+}
+
+.lead-benefits {
+  flex-direction: column;
+}
+
+.lead-benefits__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+.lead-benefits__icon {
+  flex-shrink: 0;
+  width: 40px; /* можно подогнать под размер иконок */
+  height: 40px;
+}

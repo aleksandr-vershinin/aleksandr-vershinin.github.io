@@ -1,0 +1,178 @@
+.contacts {
+  --sheet-bg: #f5f4fa; /* светлый сиреневый фон */
+  --sheet-radius: 20px; /* большое скругление «таблички» */
+  --card-radius: 20px; /* скругление карточек */
+  --stroke: #eef0f4;
+  --muted: #8d9096;
+
+  &__title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  /* двухколоночная сетка уже есть, сюда только стили левого «листа» */
+  &__sheet {
+    background: var(--sheet-bg);
+    border-radius: var(--sheet-radius);
+    min-width: 0;
+  }
+
+  &__sheet-header {
+    padding-inline: 16px;
+    padding-top: 14px;
+    padding-bottom: 8px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+    .contacts__count {
+      font-size: clamp(1.25rem, calc(0.26vw + 1.19rem), 1.5rem);
+      font-weight: 500;
+      line-height: 1.1;
+      color: #2b2b2b;
+    }
+
+    .contacts__city-note {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+  }
+}
+
+/* карточка офиса */
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--stroke);
+  border-radius: var(--card-radius);
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+
+  &__title {
+    margin: 0 0 4px;
+    font-weight: 500;
+    color: #e77913;
+    font-size: clamp(1.25rem, calc(0.26vw + 1.19rem), 1.5rem);
+    line-height: 1.2;
+  }
+
+  /* РЯД: колонкой, без грида */
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #2b2b2b;
+  }
+
+  /* шапка: иконка + метка в одну строку */
+  &__head {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 20px; /* чтобы иконка не «толкала» строку */
+    line-height: 1;
+  }
+
+  &__icon {
+    width: 20px;
+    flex: none;
+    color: #96989C;
+    display: block;
+  }
+
+  /* чтобы svg брал цвет из CSS, а не из атрибута */
+  &__icon path {
+    fill: currentColor;
+  }
+
+  &__label {
+    color: #96989C;
+  }
+
+  /* значение — отдельной строкой ниже */
+  &__value {
+    margin-top: 6px;
+    font-size: 1.125rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 16px;
+    width: 200px;
+    height: auto;
+    align-self: start;
+    padding: 16px;
+    background: #f5f4fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: background .18s, border-color .18s;
+    justify-self: start;
+
+    &:hover {
+      background: #eeeaf9;
+      border-color: #e0e2ea;
+    }
+  }
+
+  &.is-active {
+    outline: 3px solid rgba(242, 124, 34, .22);
+    outline-offset: -2px;
+    border-color: #ffd7b8;
+  }
+}
+
+/* адаптив: на мобилке sheet остаётся, карта уезжает ниже */
+@media (max-width: 1023px) {
+  .contacts__list {
+    max-height: none;
+  }
+}
+
+
+.contacts__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.contacts__map {
+  min-width: 0;
+}
+
+.contacts__map-canvas {
+  width: 100%;
+  height: clamp(365px, 70vh, 995px);
+  border-radius: 32px;
+  overflow: hidden;
+  background: #e9ecef; /* фон пока карта грузится */
+}
+
+
+/* ≥1024px — две колонки
+   слева: 328 → 555
+   справа (карта): 328 → 795 */
+@media (min-width: 1024px) {
+  .contacts__grid {
+    grid-template-columns:
+      minmax(328px, 555px)
+      minmax(328px, 795px);
+  }
+}
+
+/* (опционально) чуть меньше радиус на совсем узких экранах */
+@media (max-width: 480px) {
+  .contacts__map-canvas {
+    border-radius: 24px;
+  }
+}

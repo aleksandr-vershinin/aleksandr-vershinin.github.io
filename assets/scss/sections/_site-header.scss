@@ -1,0 +1,268 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+
+/* =================== Header =================== */
+.site-header {
+  position: relative;
+  z-index: 30;
+  background: transparent;
+  inline-size: 100%;
+
+  &__container {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-secondary, #f5f4fa);
+    border: 2px solid var(--color-border, #eff0f3);
+    border-radius: var(--radius-md, 16px);
+    max-height: 56px;
+    gap: clamp(16px, 2vw, 32px);
+    inline-size: 100%;
+  }
+
+  &__logo {
+    height: 56px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+      margin-left: clamp(8px, 2vw, 16px);
+      height: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &__burger {
+    display: none;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 16px;
+    padding: 0;
+    z-index: 40;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 48px;
+    padding-block: 12px;
+    padding-inline: clamp(16px, 3vw, 24px);
+    border-radius: var(--radius-md, 16px);
+    font-size: clamp(16px, 1vw, 18px);
+    font-weight: 500;
+    line-height: 1.4;
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-accent, #ee8a2c);
+    color: #fff;
+    margin-right: 4px;
+    white-space: nowrap;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: #e77913;
+    }
+  }
+
+  .container > * {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  // --- Tablet down: shrink logo a bit ---
+  @media (max-width: 1150px) {
+    &__logo {
+      height: 52px;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+
+  // --- Hide nav/contact, show burger on mobile ---
+  @media (max-width: 1024px) {
+    .main-nav,
+    &__contact {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+      margin-left: auto;
+      order: 10;
+    }
+  }
+}
+
+/* =================== Main Nav =================== */
+.main-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 1360px;
+  overflow: visible; /* не режем дропдаун */
+  padding-block: 16px;
+  z-index: 35;
+  border-radius: var(--radius-md, 16px);
+
+  /* убираем «глобальный» ховер, чтобы не красить все пункты разом */
+  /* (раньше было .main-nav:hover { color: #ee8a2c; }) */
+}
+
+.main-nav__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: clamp(12px, 2vw, 36px);
+}
+
+/* Обычные ссылки верхнего уровня (например, «Агенствам») */
+.main-nav__link {
+  color: var(--color-text-primary, #2b2b2b);
+  font-size: clamp(0.875rem, 1.125vw, 1.125rem);
+  // font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-accent-hover, #ee8a2c);
+  }
+}
+
+/* Кнопки-раскрыватели (верхние пункты с подменю) — выглядят как ссылки */
+.main-nav__disclosure {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(0.875rem, 1.125vw, 1.125rem);
+  color: var(--color-text-primary, #2b2b2b);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-accent-hover, #ee8a2c);
+  }
+}
+
+/* якорим дропдаун к пункту */
+.main-nav__item {
+  position: relative;
+}
+
+/* =================== Dropdown (submenu) =================== */
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: -12px; /* подстрой, если нужно */
+  min-width: 260px;
+  max-width: 340px;
+  background: var(--color-bg-secondary, #f5f4fa);
+  // border: 1px solid var(--color-border, #eff0f3);
+  border-radius: var(--radius-md, 16px);
+  // box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  padding: 14px 18px;
+  display: none;
+  z-index: 1000;
+}
+.has-submenu.is-open > .nav-submenu {
+  display: block;
+}
+.nav-submenu[hidden] {
+  display: none !important;
+}
+
+.nav-submenu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+/* Внутренние ссылки — только цвет (без фона) */
+.nav-submenu__link {
+  display: block;
+  color: var(--color-text-primary, #2b2b2b);
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: color 0.2s ease;
+}
+.nav-submenu__link:hover {
+  color: var(--color-accent-hover, #ee8a2c);
+}
+.nav-submenu__link:active {
+  color: var(--color-accent, #ee8a2c);
+}
+
+@media (max-width: 1024px) {
+  .nav-submenu {
+    display: none !important;
+  } /* десктоп-фича */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-submenu {
+    transition: none;
+  }
+}
+
+/* базовый цвет внутри подменю — чтобы любые a:visited наследовали верный */
+.nav-submenu {
+  color: var(--color-text-primary, #2b2b2b);
+}
+
+/* ссылки подменю: явно фиксируем link/visited, чтобы перебить reset */
+.nav-submenu__link,
+.nav-submenu__link:link,
+.nav-submenu__link:visited {
+  color: inherit; /* берём из .nav-submenu -> тёмный текст */
+  text-decoration: none;
+}
+
+/* ховеры/актив — как раньше */
+.nav-submenu__link:hover {
+  color: var(--color-accent-hover, #ee8a2c);
+}
+.nav-submenu__link:active {
+  color: var(--color-accent, #ee8a2c);
+}
+.nav-submenu__link:focus-visible {
+  outline: 2px solid var(--color-accent, #ee8a2c);
+  outline-offset: 2px;
+}
+
+/* Хедер: ссылки меню — зафиксировать цвет и ховер */
+.site-header .main-nav__link,
+.site-header .main-nav__link:link,
+.site-header .main-nav__link:visited {
+  color: var(--color-text-primary, #2b2b2b);
+  text-decoration: none;
+}
+
+.site-header .main-nav__link:hover {
+  color: var(--color-accent-hover, #ee8a2c);
+}

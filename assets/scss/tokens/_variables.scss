@@ -1,0 +1,31 @@
+:root {
+  // Цвета
+  --color-bg-default: #fff;
+  --color-bg-secondary: #f5f4fa;
+  --color-bg-hover: #e9e6f4;
+
+  --color-text-primary: #2b2b2b;
+  --color-text-secondary: #595959;
+  --color-text-muted: #96989c;
+  --color-text-muted-alt: #9a9a9a;
+
+  --color-border: #eff0f3;
+
+  --color-accent: #ee8a2c;
+  --color-accent-hover: #e77913;
+  --color-blue: #4c9eff;
+  --color-blue-telegram: #0898e6;
+
+  // Брейкпойнты
+  --breakpoint-xxl: 1360px;
+
+  // Радиусы
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  // Типографика
+  --font-main: "Golos Text", sans-serif;
+}

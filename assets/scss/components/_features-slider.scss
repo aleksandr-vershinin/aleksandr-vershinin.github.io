@@ -1,0 +1,188 @@
+:root {
+  --features-slider-width: 1360px;
+  --features-slider-gap: 32px;
+  --features-slider-arrow-size: 65.33px;
+  --features-slider-arrow-size-mobile: 56px;
+  --features-slider-arrow-border: 1.17px solid #e5e7eb;
+}
+
+/* стрелки */
+.features-slider {
+  &__arrow {
+    width: var(--features-slider-arrow-size);
+    height: var(--features-slider-arrow-size);
+    min-width: var(--features-slider-arrow-size);
+    min-height: var(--features-slider-arrow-size);
+    border: var(--features-slider-arrow-border);
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    transition: background .18s, border-color .18s;
+
+    svg {
+      width: 18px !important;
+      height: 17px !important;
+      display: block;
+      pointer-events: none;
+    }
+
+    svg path {
+      stroke: #96989c;
+    }
+
+    &:not(.is-disabled) {
+      background: #f5f4fa;
+
+      svg path {
+        stroke: #2b2b2b;
+      }
+    }
+
+    &:disabled, &.is-disabled {
+      background: #fff;
+      opacity: .4;
+      pointer-events: none;
+    }
+  }
+}
+
+/* ≥1601px — стрелки по бокам */
+@media (min-width: 1601px) {
+  .features-slider__arrow.desktop-only {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .features-slider__arrow--prev.desktop-only {
+    left: calc(50% - (var(--features-slider-width) / 2) - var(--features-slider-gap) - var(--features-slider-arrow-size));
+  }
+  .features-slider__arrow--next.desktop-only {
+    right: calc(50% - (var(--features-slider-width) / 2) - var(--features-slider-gap) - var(--features-slider-arrow-size));
+  }
+  .features-slider__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+/* ≤1600px — стрелки снизу */
+@media (max-width: 1600px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+  }
+
+  .features-slider__arrows {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 32px;
+    width: 100%;
+  }
+  .features-slider__arrow {
+    position: static !important;
+    margin: 0 8px;
+    transform: none;
+  }
+  .features-slider__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .features-slider__image-wrapper {
+    width: 100%;
+    max-width: 100vw;
+    margin-bottom: 0;
+  }
+}
+
+/* мобилка */
+@media (max-width: 1023px) {
+  .features-slider__arrows {
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .features-slider__arrow {
+    width: var(--features-slider-arrow-size-mobile);
+    height: var(--features-slider-arrow-size-mobile);
+    min-width: var(--features-slider-arrow-size-mobile);
+    min-height: var(--features-slider-arrow-size-mobile);
+  }
+}
+
+/* одинаковая высота колонки */
+.features-slider__track {
+  display: flex;
+  align-items: stretch;
+}
+
+.features-slider__slide {
+  width: 325px !important;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: transparent;
+  padding: 0;
+  min-height: 0;
+}
+
+.features-slider__slide > .reason-card {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+/* пагинация */
+.features-slider__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 0;
+  user-select: none;
+  margin-top: 40px;
+  /* при желании можно скрыть на меньших экранах:
+     @media (max-width:1600px){ display:none; } */
+}
+
+/* bullets — класс должен совпадать с bulletClass в JS */
+.features-slider__dot {
+  width: 8px;
+  height: 8px;
+  background: #e9e6f4;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transition: width .18s ease, background-color .18s ease, border-radius .18s ease;
+}
+
+.features-slider__dot::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+}
+
+.features-slider__dot.is-active {
+  width: 24px;
+  height: 8px;
+  border-radius: 999px;
+  background: #595959;
+}
+
+.features-slider__dot:focus-visible {
+  outline: 2px solid #595959;
+  outline-offset: 2px;
+}

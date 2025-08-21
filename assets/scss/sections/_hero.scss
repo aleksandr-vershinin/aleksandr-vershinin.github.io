@@ -1,0 +1,152 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+
+.hero-wrapper {
+  position: relative;
+  padding-block-start: clamp(10px, 3vw, 16px); // from top to first element
+  //padding-block-end: clamp(24px, 5vw, 50px); // bottom space after .hero__hint
+  background-image: url("/assets/images/content/hero-bg.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: #fff;
+  isolation: isolate;
+  border-bottom-left-radius: var(--radius-2xl, 32px);
+  border-bottom-right-radius: var(--radius-2xl, 32px);
+  overflow: hidden;
+  z-index: 0;
+  margin-bottom: 50px;
+
+  &--country-page {
+    background-image: url("assets/images/content/china-hero-banner.jpg");
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .hero-glow {
+      display: none;
+    }
+  }
+
+  &--tour-info {
+    background-image: url("/assets/images/content/hero-banner-dagestan.jpg");
+    background-position: center center;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 68px; // a bit less on mobile
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(180deg, #2b2b2b 0%, rgba(43, 43, 43, 0) 100%);
+  }
+
+  &::after {
+    bottom: 0;
+    border-bottom-left-radius: var(--radius-2xl, 32px);
+    border-bottom-right-radius: var(--radius-2xl, 32px);
+    background: linear-gradient(0deg, #2b2b2b 0%, rgba(43, 43, 43, 0) 100%);
+  }
+
+  @include media.respond-min($bp-md) {
+    //height: 600px;
+    &::before,
+    &::after {
+      height: 97px;
+    }
+  }
+}
+
+.hero-glow {
+  position: absolute;
+  width: 480px; // mobile base, less obtrusive
+  height: 480px;
+  top: -80px;
+  left: 30vw;
+  background-color: #222222;
+  opacity: 0.3;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 1;
+
+  @include media.respond-min($bp-md) {
+    width: 797px;
+    height: 797px;
+    top: -132px;
+    left: 562px;
+    filter: blur(200px);
+  }
+}
+
+.hero {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+
+  &__title {
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: #fff;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  &__subtitle {
+    line-height: 1.3;
+    color: #fff;
+    font-size: clamp(1.25rem, 1.25vw + 0.5rem, 1.5rem);
+  }
+
+  &__hint {
+    color: #fff;
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}
+
+.hero-wrapper--country {
+  background-image: url("/assets/images/content/china-hero-banner.jpg");
+
+  .hero__flag {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: clamp(16px, 2vw, 32px);
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+  }
+
+  .hero__title {
+    margin-bottom: 24px;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 147px
+  }
+}
+
+@media (max-width: 1023px) {
+  .search-panel { display: none; }
+}

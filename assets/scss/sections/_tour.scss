@@ -1,0 +1,148 @@
+@use "../components/tour-price";
+@use "../components/filter-chip";
+
+/* ===== TOUR CATALOG ===== */
+$tour-card-w: 325px;
+
+.tour-catalog {
+  &__title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  &__grid {
+    --tour-card-w: 325px;
+    --tour-card-gap: 20px;
+
+    display: grid;
+    gap: var(--tour-card-gap);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, var(--tour-card-w));
+  }
+
+  &--tour-page {
+    .tour-catalog__title {
+      font-size: clamp(2.5rem, calc(1.6vw + 2.1rem), 4rem);
+    }
+  }
+
+  .tour-catalog__more {
+    display: block;
+    text-align: center;
+
+    .btn {
+      margin-inline: auto;
+    }
+  }
+}
+
+.tour-catalog .tour-catalog--home {
+  &__more {
+    display: none;
+
+    @media (max-width: 728px) {
+      display: block;
+      text-align: center;
+
+      .btn {
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+/* ===== TOUR SLIDER ===== */
+tour-slider {
+  margin-top: clamp(80px, 3.25vw + 18px, 130px);
+
+  &__container {
+    max-width: var(--breakpoint-xxl, 1360px);
+    margin-inline: auto;
+    position: relative;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+  }
+
+  & {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  &__arrow {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &--prev {
+      left: calc(50% - var(--breakpoint-xxl, 1360px) / 2 - 32px);
+    }
+
+    &--next {
+      right: calc(50% - var(--breakpoint-xxl, 1360px) / 2 - 32px);
+    }
+
+    &:hover {
+      background-color: var(--color-bg-default, #fff);
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+}
+
+.tour-slide {
+  aspect-ratio: 16 / 6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 24px;
+
+  &--vietnam {
+    background-image: url("/assets/images/content/banner-vietnam.jpg");
+  }
+
+  &--thailand {
+    background-image: url("/assets/images/content/banner-vietnam.jpg");
+  }
+
+  &--japan {
+    background-image: url("/assets/images/content/banner-vietnam.jpg");
+  }
+}

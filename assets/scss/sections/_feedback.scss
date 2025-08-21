@@ -1,0 +1,59 @@
+/* ===== Feedback Section (slider wrapper) ===== */
+
+.feedback {
+  margin-top: clamp(32px, 3vw, 50px);
+
+  &__title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: clamp(24px, 2vw, 30px);
+  }
+
+  /* Horizontal slider with reviews */
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    align-items: stretch; // stretch review cards vertically
+
+    > .review-card {
+      flex: 0 0 440px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Navigation arrows (if used) */
+  &__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.3em 0.6em;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+  }
+}

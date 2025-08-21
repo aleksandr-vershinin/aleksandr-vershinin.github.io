@@ -1,0 +1,43 @@
+.scroll-row {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 401px;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  align-items: flex-start;
+
+  /* edge-to-edge по умолчанию */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+
+  &--with-offsets {
+    .person-card:nth-child(even),
+    .image-tile:nth-child(even) {
+      margin-top: clamp(1rem, 3vw, 2rem);
+    }
+  }
+
+  &--limited { max-width: none; }
+
+  &::-webkit-scrollbar { display: none; }
+
+  > * {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  &--mobile-inset {
+    @media (max-width: 600px) {
+      --inset: clamp(24px, 6vw, 80px);
+      padding-left: max(var(--inset), env(safe-area-inset-left));
+      scroll-padding-left: max(var(--inset), env(safe-area-inset-left));
+      /* добавь при необходимости:
+         padding-right / scroll-padding-right */
+    }
+  }
+}

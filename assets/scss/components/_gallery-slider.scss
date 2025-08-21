@@ -1,0 +1,278 @@
+:root {
+  --gallery-slider-width: 1360px;
+  --gallery-slider-gap: 32px;
+  --gallery-slider-arrow-size: 65.33px;
+  --gallery-slider-arrow-size-mobile: 56px;
+  --gallery-slider-slide-size: 325px;
+  --gallery-slider-slide-gap: 20px;
+  --gallery-slider-radius: 28px;
+  --gallery-slider-arrow-border: 1.17px solid #e5e7eb;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.gallery-slider {
+  &__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image-wrapper {
+    width: var(--gallery-slider-width);
+    max-width: 100vw;
+    overflow: hidden;
+    border-radius: var(--gallery-slider-radius);
+    margin: 0;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  &__track {
+    display: flex;
+    gap: var(--gallery-slider-slide-gap);
+    transition: transform 0.3s;
+    will-change: transform;
+  }
+
+  &__slide {
+    width: var(--gallery-slider-slide-size);
+    height: var(--gallery-slider-slide-size);
+    border-radius: var(--gallery-slider-radius);
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+
+  .gallery-slider__arrow {
+    width: var(--gallery-slider-arrow-size);
+    height: var(--gallery-slider-arrow-size);
+    min-width: var(--gallery-slider-arrow-size);
+    min-height: var(--gallery-slider-arrow-size);
+    border: var(--gallery-slider-arrow-border);
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #fff; // неактивная по умолчанию
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    transition: background 0.18s, border-color 0.18s;
+
+    svg {
+      width: 18px !important;
+      height: 17px !important;
+      display: block;
+      margin: auto;
+      pointer-events: none;
+
+      path { stroke: #96989c; } // дефолт
+    }
+
+    // активная (кликательная)
+    &:not(.is-disabled) {
+      background: #f5f4fa;
+
+      svg path { stroke: #2b2b2b; }
+    }
+
+    // disabled от Swiper
+    &:disabled,
+    &.is-disabled {
+      background: #fff;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 0;
+    user-select: none;
+    margin-top: 40px;
+
+    @media (max-width: 1600px) {
+      display: none;
+    }
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    background: #e9e6f4;
+    border-radius: 50%;
+    display: inline-block;
+    transition: width 0.18s ease, background-color 0.18s ease,
+    border-radius 0.18s ease;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -8px; /* «хит-ареа» вокруг точки */
+    }
+
+    &.is-active {
+      width: 24px;
+      height: 8px;
+      border-radius: 999px;
+      background: #595959;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #595959;
+      outline-offset: 2px;
+    }
+  }
+
+}
+
+.gallery-slider__arrow--next svg {
+  transform: rotate(180deg);
+}
+
+// --- ≥1601px: стрелки по бокам (absolute)
+@media (min-width: 1601px) {
+  .gallery-slider__arrow.desktop-only {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.gallery-slider__arrow--prev {
+      left: calc(50% - (var(--gallery-slider-width) / 2) - var(--gallery-slider-gap) - var(--gallery-slider-arrow-size));
+    }
+
+    &.gallery-slider__arrow--next {
+      right: calc(50% - (var(--gallery-slider-width) / 2) - var(--gallery-slider-gap) - var(--gallery-slider-arrow-size));
+    }
+  }
+  .gallery-slider__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+// --- ≤1600px: стрелки снизу, по центру
+@media (max-width: 1600px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+  }
+  .gallery-slider__arrows {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 32px;
+    width: 100%;
+  }
+  .gallery-slider__arrow {
+    position: static !important;
+    margin: 0 8px;
+    width: var(--gallery-slider-arrow-size);
+    height: var(--gallery-slider-arrow-size);
+    min-width: var(--gallery-slider-arrow-size);
+    min-height: var(--gallery-slider-arrow-size);
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+  .gallery-slider__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .gallery-slider__image-wrapper {
+    width: 100%;
+    max-width: 100vw;
+    margin-bottom: 0;
+  }
+}
+
+// --- Мобилка
+@media (max-width: 1023px) {
+  .gallery-slider__arrows {
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .gallery-slider__arrow {
+    width: var(--gallery-slider-arrow-size-mobile);
+    height: var(--gallery-slider-arrow-size-mobile);
+    min-width: var(--gallery-slider-arrow-size-mobile);
+    min-height: var(--gallery-slider-arrow-size-mobile);
+  }
+  .gallery-slider__slide {
+    width: 88vw;
+    height: 88vw;
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 16px;
+  }
+  .gallery-slider__image-wrapper {
+    border-radius: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+// --- Мелкий фикс для заголовка (если надо)
+.gallery-slider__title {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* модификатор для логотипов/партнёров */
+.gallery-slider--logos {
+  /* переопределяем только переменные */
+  --gallery-slider-width: 1360px;
+  --gallery-slider-slide-size: 210px;
+  --gallery-slider-slide-gap: 24px;
+  --gallery-slider-radius: 18px;
+  --gallery-slider-arrow-size: 56px;
+  --gallery-slider-arrow-size-mobile: 46px;
+  --gallery-slider-arrow-border: 1.17px solid #e5e7eb;
+
+  .gallery-slider__image-wrapper {
+  }
+
+  .gallery-slider__slide {
+    background: #f5f4fa;
+  }
+
+  /* логотипы не кропаем, а вписываем */
+  .gallery-slider__image {
+    object-fit: contain;
+    width: 158px; /* максимально, чтобы не липло к краям */
+    height: 58px;
+    max-width: 70%;
+    max-height: 60%;
+    margin: auto;
+  }
+}

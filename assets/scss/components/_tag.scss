@@ -1,0 +1,22 @@
+.tag {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 40px;
+  padding: 2px 8px 8px;
+  border-radius: 12px;
+
+  &--pink {
+    background: linear-gradient(92.32deg, #FD6E48 -105.09%, #FF6BC8 81.01%, #9427FF 234.68%);
+    color: #fff;
+  }
+
+  &--blue {
+    background: #dbeafe;
+    color: #1e3a8a;
+  }
+
+  &--blue-1 {
+    background-color: var(--blue, #4c9eff);
+    color: #fff;
+  }
+}

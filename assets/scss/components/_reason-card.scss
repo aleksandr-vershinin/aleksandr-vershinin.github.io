@@ -1,0 +1,46 @@
+/* оформление карточки внутри features-slider */
+.reason-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  background: #f5f4fa;
+  border-radius: 24px;
+  padding: 24px;
+
+  &__icon {
+    line-height: 0;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-weight: 600;
+    color: #2b2b2b;
+    font-size: 1.125rem;
+  }
+
+  &__text {
+    margin: 0;
+    color: #595959;
+    font-size: 1rem;
+  }
+}
+
+/* опционально: переиспользовать типографику из info-highlights */
+.reason-card .info-highlights__icon {
+  margin-bottom: 16px;
+}
+
+.reason-card .info-highlights__title {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #2b2b2b;
+  font-size: 1.125rem;
+}
+
+.reason-card .info-highlights__text {
+  margin: 0;
+  color: #595959;
+  font-size: 1rem;
+}

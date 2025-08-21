@@ -1,0 +1,193 @@
+.contacts-banner {
+  position: relative;
+  padding: clamp(32px, 6vw, 64px) 0;
+  background-color: var(--color-blue, #4c9eff);
+  border-radius: 24px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin-bottom: 32px;
+
+  &__decor {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    // Твои SVG-декорации сюда: большие вопросительные знаки и круги
+    // Например:
+    // .contacts-banner__question {}
+    // .contacts-banner__circle {}
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  &__phone {
+    color: #fff;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 600;
+    margin-bottom: clamp(2.5rem, 3vw, 3rem);
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #fff;
+    color: #4c9eff;
+    border: 1px solid #eff0f3;
+    border-radius: var(--radius-md, 16px);
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 16px;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    min-width: 140px;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-right: 8px;
+      fill: #4c9eff;
+    }
+
+    &:hover,
+    &:focus {
+      background: #f5f4fa;
+      // color: #0591d8;
+      // border-color: #e3f0fa;
+    }
+  }
+
+  .contacts-banner__btn--lg {
+    font-size: clamp(2rem, 1.5vw + 1.2rem, 2.5rem);
+  }
+
+  &__title {
+    color: #fff;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 500;
+    margin-bottom: 34px;
+    margin-top: 0;
+  }
+
+  &__messengers {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .contacts-banner__btn {
+      margin-bottom: 0;
+    }
+  }
+
+  &__question-1 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &__question-2 {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    max-width: 120px;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &__question-3 {
+    position: absolute;
+    top: 460px;
+    left: 80px;
+    transform: scaleX(-1);
+    max-width: 70px;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &__question-4 {
+    position: absolute;
+    top: 400px;
+    right: 100px;
+    max-width: 70px;
+    transform: rotate(-60deg);
+  }
+
+  .ellipse11,
+  .ellipse12,
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse14 {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse12 {
+    position: absolute;
+    top: 570px;
+    left: 720px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 410px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+}

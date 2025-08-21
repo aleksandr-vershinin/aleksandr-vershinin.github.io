@@ -1,0 +1,977 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+
+.side-banner {
+  position: relative;
+  color: #fff;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 180px;
+    background-color: var(--color-blue, #4c9eff);
+    border-radius: 24px;
+    overflow: hidden;
+    padding: clamp(16px, 5vw, 56px) clamp(50px, 8vw, 130px);
+  }
+
+  &__content {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+
+    .btn {
+      margin-top: 24px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 1.56vw + 2.08rem, 4rem);
+    line-height: 1.13;
+  }
+
+  &__desc {
+    font-size: clamp(1rem, 0.13vw + 0.56rem, 1.125rem);
+    margin-top: 32px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 300px;
+    gap: 0.5em;
+    background-color: #fff;
+    color: #0898e6;
+    padding: 0.75em 1.25em;
+    border-radius: 14px;
+    font-size: 1.125rem;
+    text-decoration: none;
+    line-height: 1.3;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      background-color: #f5f4fa;
+    }
+  }
+
+  &__tag {
+    position: relative;
+    font-size: 1rem;
+    background: #fff;
+    color: var(--color-blue, #4c9eff);
+    border-radius: 18px;
+    padding: 9px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: -0.04em;
+  }
+
+  &__media {
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+.side-banner--telegram {
+  .side-banner__media {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    width: clamp(328px, 35vw, 680px);
+    height: clamp(300px, 0.92vw + 406px, 441px);
+    z-index: 2;
+  }
+}
+
+.tg-cards-group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tg-card {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+
+  &__text {
+    margin-top: 12px;
+    width: 100%;
+    padding: 0 12px;
+    font-size: clamp(0.875rem, 0.3vw + 0.7rem, 0.95rem);
+    color: #2b2b2b;
+    line-height: 1.4;
+  }
+}
+
+.tg-card--left,
+.tg-card--right {
+  width: clamp(140px, 9.8vw + 103px, 291px);
+  height: clamp(122px, 8.5vw + 90px, 253px);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+  }
+}
+
+.tg-card--center {
+  width: clamp(140px, 9.87vw + 103px, 292px);
+  height: clamp(180px, 12.99vw + 130.65px, 380px);
+  z-index: 2;
+
+  img {
+    width: clamp(140px, 9.87vw + 103px, 280px);
+    height: clamp(120px, 8.8vw + 95px, 233px);
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.tg-card--left {
+  top: 80%;
+  left: 25%;
+  transform: translate(-50%, -50%) rotate(-16deg);
+  z-index: 1;
+}
+
+.tg-card--center {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.tg-card--right {
+  top: 80%;
+  left: 70%;
+  transform: translate(-50%, -50%) rotate(16deg);
+  z-index: 0;
+}
+
+.side-banner--telegram {
+  .side-banner__inner {
+    background-image: url("/assets/images/content/Vector65.svg");
+    background-size: contain; // или contain, если надо, либо '100% 100%'
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.side-banner--help {
+  .side-banner__inner {
+    position: relative;
+    z-index: 1;
+    min-height: unset;
+    box-sizing: border-box;
+    height: 350px;
+  }
+
+  .side-banner__media {
+    position: relative;
+    top: 57px;
+    right: 0;
+  }
+
+  .side-banner__desc {
+    margin-top: 24px;
+  }
+
+  .ellipse11,
+  .ellipse12,
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse11 {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse12 {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 410px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+}
+
+.side-banner--any-country {
+  .side-banner__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .side-banner__tag {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    font-weight: 500;
+    transform: rotate(15deg);
+    margin: 0;
+    z-index: 2;
+  }
+
+  .side-banner__media {
+    transform: scaleX(-1) rotate(145deg);
+    position: absolute;
+    top: -37%;
+    left: 41%;
+  }
+
+  .side-banner__media img {
+    //max-width: 600px;
+    //max-height: 695px;
+
+    //width: clamp(320px, 28vw, 600px);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .ellipse11,
+  .ellipse12,
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse11 {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse12 {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 410px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .side-banner__stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; // ниже основного контента, выше ellipse если надо
+  }
+
+  .glowing-star {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    // пример позиционирования — индивидуально подбирай!
+    &.glowing-star-1 {
+      top: 35px;
+      left: 20px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-2 {
+      top: -21px;
+      left: 70px;
+      opacity: 0.3;
+    }
+
+    &.glowing-star-3 {
+      bottom: 10px;
+      left: 60px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-4 {
+      top: 10px;
+      right: 10px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-5 {
+      bottom: 80px;
+      left: -23x;
+      opacity: 0.2;
+    }
+
+    &.glowing-star-6 {
+      bottom: -27px;
+      right: 110px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star--dim {
+      opacity: 0.2;
+    }
+  }
+}
+
+.side-banner--luggage {
+  .side-banner__inner {
+    position: relative;
+
+    .big-blurry-plane {
+      position: absolute;
+      top: 10%;
+      right: 12%;
+      filter: blur(2px) brightness(2);
+      pointer-events: none;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  .side-banner__tag {
+    position: absolute;
+    left: 41%;
+    top: 50%;
+    font-weight: 500;
+    transform: rotate(15deg);
+    z-index: 2;
+  }
+
+  .side-banner__media {
+    position: absolute;
+    top: 5%;
+    right: -20%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .side-banner__media img {
+    width: clamp(450px, 32vw, 632px); // подгони min/max под макет
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .ellipse11,
+  .ellipse12,
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse11 {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    width: 1500px;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse12 {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 410px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .side-banner__stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; // ниже основного контента, выше ellipse если надо
+  }
+
+  .glowing-star {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    opacity: 0.6;
+    // пример позиционирования — индивидуально подбирай!
+    &.glowing-star-1 {
+      top: 35px;
+      left: 20px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-2 {
+      top: -21px;
+      left: 70px;
+      opacity: 0.3;
+    }
+
+    &.glowing-star-3 {
+      bottom: 10px;
+      left: 60px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-4 {
+      top: 10px;
+      right: 10px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-5 {
+      bottom: 80px;
+      left: -23x;
+      opacity: 0.2;
+    }
+
+    &.glowing-star-6 {
+      bottom: -27px;
+      right: 110px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star--dim {
+      opacity: 0.2;
+    }
+  }
+}
+
+.side-banner--passports {
+  .side-banner__inner {
+    position: relative;
+  }
+
+  .side-banner__tag {
+    position: absolute;
+    left: 41%;
+    top: 50%;
+    font-weight: 500;
+    transform: rotate(15deg);
+    z-index: 2;
+  }
+
+  .side-banner__media {
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    right: -20%;
+    transform: translateX(-50%);
+  }
+
+  .side-banner__media img {
+    width: clamp(480px, 32vw, 632px); // подгони min/max под макет
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .ellipse11,
+  .ellipse12,
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse14 {
+    position: absolute;
+    top: -80px;
+    left: 80px;
+    width: 1500px;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse12 {
+    position: absolute;
+    top: 310px;
+    left: 720px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ellipse13 {
+    position: absolute;
+    top: 0;
+    left: 410px;
+    width: 100%;
+    height: auto;
+    z-index: 0; // ниже контента
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .side-banner__stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; // ниже основного контента, выше ellipse если надо
+  }
+
+  .glowing-star {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    // пример позиционирования — индивидуально подбирай!
+    &.glowing-star-1 {
+      top: 35px;
+      left: 20px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-2 {
+      top: -21px;
+      left: 70px;
+      opacity: 0.3;
+    }
+
+    &.glowing-star-3 {
+      bottom: 10px;
+      left: 60px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-4 {
+      top: 10px;
+      right: 10px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star-5 {
+      bottom: 80px;
+      left: -23x;
+      opacity: 0.2;
+    }
+
+    &.glowing-star-6 {
+      bottom: -27px;
+      right: 110px;
+      opacity: 0.65;
+    }
+
+    &.glowing-star--dim {
+      opacity: 0.2;
+    }
+  }
+}
+
+// Mobile-first responsiveness using media mixins
+
+@include media.respond-max($bp-md) {
+  .side-banner__inner {
+    align-items: center;
+    text-align: center;
+    height: 441px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: unset;
+    padding: clamp(12px, 3vw, 32px);
+  }
+
+  .side-banner__content {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-width: 304px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-banner__text {
+    flex-direction: column;
+    align-items: center;
+
+    .side-banner__title {
+      order: 0;
+    }
+
+    .side-banner__button {
+      order: 2;
+    }
+  }
+
+  .side-banner--telegram .side-banner__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 441px;
+    width: 100%;
+    min-height: unset;
+    justify-content: flex-start;
+    padding-bottom: 144px; // <-- зарезервировали место под медиа
+  }
+
+  .side-banner--telegram .side-banner__media {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 328px;
+    height: 144px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .side-banner--telegram .side-banner__media img {
+    width: 328px;
+    height: 144px;
+  }
+
+  .tg-cards-group {
+    position: relative;
+    width: 328px;
+    height: 144px;
+    margin: 0 auto;
+  }
+
+  .side-banner--help {
+    .side-banner__inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 548px;
+      padding-inline: clamp(12px, 3vw, 32px);
+      text-align: center;
+      position: relative;
+    }
+
+    .side-banner__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 304px;
+      margin-bottom: 60px; // отступ от текста до картинки
+    }
+
+    .side-banner__media {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      transform: translateX(-50%);
+      width: 328px;
+      position: absolute;
+      left: 50%;
+      right: auto;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    .side-banner__media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-width: 100%;
+    }
+
+    .ellipse11,
+    .ellipse12,
+    .ellipse13 {
+      display: none;
+    }
+  }
+
+  .side-banner--any-country {
+    .side-banner__inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 548px; // или другое значение, чтобы баннер не был слишком низким
+      padding-inline: clamp(50px, 7vw, 130px);
+      padding-top: 48px; // настраивай по вкусу!
+      padding-bottom: 190px; // резерв под картинку (примерно по макету)
+      text-align: center;
+      position: relative;
+    }
+
+    .side-banner__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 304px;
+      margin-bottom: 32px; // расстояние между контентом и PNG (настраивай!)
+    }
+
+    .side-banner__tag {
+      position: static;
+      transform: none;
+      margin: 20px auto 32px;
+      left: unset;
+      top: unset;
+      z-index: 1;
+    }
+
+    .side-banner__media {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 420px;
+      height: 220px;
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translate(-58%, 10px) rotate(-135deg);
+      pointer-events: none;
+    }
+
+    .side-banner__media img {
+      display: block;
+      width: clamp(450px, 32vw, 632px);
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+      transform: scaleX(-1);
+    }
+  }
+
+  .side-banner--luggage {
+    .side-banner__inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 608px;
+      padding-inline: clamp(50px, 7vw, 130px);
+      padding-top: 48px;
+      padding-bottom: 190px; // подгони под высоту чемоданов
+      text-align: center;
+      position: relative;
+    }
+
+    .side-banner__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 304px;
+      margin-bottom: 32px;
+    }
+
+    .side-banner__tag {
+      position: static;
+      transform: none;
+      margin: 20px auto 32px;
+      left: unset;
+      top: unset;
+      z-index: 1;
+    }
+
+    .side-banner__media {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 328px;
+      height: 253px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -100px;
+      pointer-events: none;
+    }
+
+    .side-banner__media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-width: 100%;
+      pointer-events: none;
+      user-select: none;
+      position: static;
+      top: unset;
+      left: unset;
+      transform: none;
+    }
+  }
+
+  .side-banner--passports {
+    .side-banner__inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 608px;
+      padding-inline: clamp(50px, 7vw, 130px);
+      padding-top: 48px;
+      padding-bottom: 190px; // подгони под высоту чемоданов
+      text-align: center;
+      position: relative;
+    }
+
+    .side-banner__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 304px;
+      margin-bottom: 32px;
+    }
+
+    .side-banner__tag {
+      position: static;
+      transform: none;
+      margin: 20px auto 32px;
+      left: unset;
+      top: unset;
+      z-index: 1;
+    }
+
+    .side-banner__media {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 358px;
+      height: 273px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -100px;
+      pointer-events: none;
+    }
+
+    .side-banner__media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-width: 100%;
+      pointer-events: none;
+      user-select: none;
+      position: static;
+      top: unset;
+      left: unset;
+      transform: none;
+    }
+  }
+}

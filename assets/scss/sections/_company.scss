@@ -1,0 +1,106 @@
+/* ===== Company Intro Section ===== */
+.company-intro {
+  padding-top: clamp(2rem, 5vw, 3rem);
+  background: linear-gradient(
+                  180deg,
+                  var(--color-bg-secondary, #f5f4fa) 0%,
+                  #fff 115.53%
+  );
+
+  &__header {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 2.13rem + 1.56vw, 4rem);
+    line-height: 1.2;
+
+    .highlight {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+      background-color: var(--color-accent, #ee8a2c);
+      color: #fff;
+      padding: 0.2em 0.5em;
+      border-radius: var(--radius-sm, 12px);
+    }
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    text-align: center;
+    color: var(--color-text-secondary, #595959);
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  &__subtext {
+    max-width: 670px;
+    font-size: 1.125rem;
+    text-align: center;
+    color: var(--color-text-secondary, #595959);
+    margin-inline: auto;
+    margin-top: clamp(32px, calc(1.25vw + 19px), 56px);
+  }
+
+  &--home {
+    .company-intro__description {
+      max-width: 805px;
+    }
+  }
+
+  &--about {
+    .company-intro__description {
+      max-width: 670px;
+    }
+  }
+}
+
+/* ===== Company Highlights ===== */
+.company-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  background-color: var(--color-bg-secondary, #f5f4fa);
+  border-radius: var(--radius-lg, 20px);
+  padding: 16px 24px;
+
+  &--about {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: clamp(2rem, 5vw, 3rem);
+  }
+
+  &__item {
+    flex: 1 1 240px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: var(--radius-md, 16px);
+    padding: 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+  }
+
+  &__content,
+  &__title,
+  &__text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--color-text-primary, #2b2b2b);
+  }
+
+  &__text {
+    letter-spacing: -0.04em;
+    color: var(--color-text-muted, #96989c);
+  }
+}

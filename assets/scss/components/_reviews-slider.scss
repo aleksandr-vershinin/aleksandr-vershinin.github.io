@@ -1,0 +1,209 @@
+:root {
+  --reviews-slider-width: 1360px;
+  --reviews-slider-arrow-size: 65.33px;
+  --reviews-slider-gap: 32px;
+  --reviews-slider-arrow-size-mobile: 56px;
+  --reviews-slider-radius: 22px;
+  --reviews-slider-arrow-border: 1.17px solid #e5e7eb;
+  --review-card-width: 440px;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.reviews-slider {
+  &__row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image-wrapper {
+    width: var(--reviews-slider-width);
+    max-width: 100vw;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--reviews-slider-radius);
+  }
+
+  &__track {
+    display: flex;
+    overflow: visible;
+    transition: transform 0.3s;
+    will-change: transform;
+  }
+
+  &__slide {
+    flex: 0 0 var(--review-card-width);
+    min-width: var(--review-card-width);
+    max-width: var(--review-card-width);
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: var(--reviews-slider-arrow-size);
+    height: var(--reviews-slider-arrow-size);
+    min-width: var(--reviews-slider-arrow-size);
+    min-height: var(--reviews-slider-arrow-size);
+    border-radius: 50%;
+    border: var(--reviews-slider-arrow-border);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    aspect-ratio: 1/1;
+    transition: background 0.18s, border-color 0.18s;
+
+    svg {
+      width: 18px;
+      height: 17px;
+
+      path {
+        stroke: #96989c;
+        transition: stroke 0.18s;
+      }
+    }
+
+    &--prev {
+      left: calc(50% - (var(--reviews-slider-width) / 2) - var(--reviews-slider-gap) - var(--reviews-slider-arrow-size));
+    }
+
+    &--next {
+      right: calc(50% - (var(--reviews-slider-width) / 2) - var(--reviews-slider-gap) - var(--reviews-slider-arrow-size));
+    }
+
+    // активная (кликательная)
+    &:not(.is-disabled) {
+      background: #f5f4fa;
+
+      svg path { stroke: #2b2b2b; }
+    }
+
+    &:disabled,
+    &.is-disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 0;
+    user-select: none;
+    margin-top: 40px;
+
+    @media (max-width: 1600px) {
+      display: none;
+    }
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    background: #e9e6f4;
+    border-radius: 50%;
+    display: inline-block;
+    transition: width 0.18s ease, background-color 0.18s ease, border-radius 0.18s ease;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -8px;
+    }
+
+    &.is-active {
+      width: 24px;
+      height: 8px;
+      border-radius: 999px;
+      background: #595959;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #595959;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.reviews-slider__arrow--next svg {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1600px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+    justify-content: center;
+    gap: 16px;
+  }
+  .reviews-slider__row {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    gap: 0;
+  }
+  .reviews-slider__image-wrapper {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 24px;
+  }
+  .reviews-slider__arrow {
+    width: var(--reviews-slider-arrow-size-mobile);
+    height: var(--reviews-slider-arrow-size-mobile);
+    min-width: var(--reviews-slider-arrow-size-mobile);
+    min-height: var(--reviews-slider-arrow-size-mobile);
+    border-radius: 50%;
+    margin: 0;
+    position: static !important;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+}
+
+@media (min-width: 1601px) {
+  .reviews-slider__arrow.desktop-only {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+  .reviews-slider__arrow--prev.desktop-only {
+    left: calc(50% - (var(--reviews-slider-width) / 2) - var(--reviews-slider-gap) - var(--reviews-slider-arrow-size));
+  }
+  .reviews-slider__arrow--next.desktop-only {
+    right: calc(50% - (var(--reviews-slider-width) / 2) - var(--reviews-slider-gap) - var(--reviews-slider-arrow-size));
+  }
+}
+
+/* --- МОБИЛЬНЫЙ БРЕЙКПОИНТ --- */
+@media (max-width: 480px) {
+  :root {
+    --review-card-width: 328px;
+  }
+}

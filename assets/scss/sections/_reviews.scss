@@ -1,0 +1,17 @@
+.reviews {
+  margin-top: clamp(32px, 3vw, 50px);
+
+  &__title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.1;
+  }
+
+  &__description {
+    width: 70%;
+    min-width: 328px;
+    // Optionally limit max width for readability on very large screens
+    // max-width: 700px;
+    font-size: 1.125rem;
+    color: var(--color-text-secondary, #595959);
+  }
+}

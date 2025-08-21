@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Плавная прокрутка для якорей. Отключить при SPA или JS-управлении скроллом.
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+// Наследуем шрифт из body, чтобы формы и кнопки выглядели как остальной текст
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+// По умолчанию обнуляем браузерные стили кнопки
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+}

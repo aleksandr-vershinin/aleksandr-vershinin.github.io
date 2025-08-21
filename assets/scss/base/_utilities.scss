@@ -1,0 +1,459 @@
+/* === MARGINS === */
+
+/* --- Fixed margins --- */
+.mb-8 {
+  margin-bottom: 8px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-12 {
+  margin-bottom: 12px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mb-56 {
+  margin-bottom: 56px;
+}
+.mb-60 {
+   margin-bottom: 60px;
+ }
+.mb-64 {
+  margin-bottom: 64px;
+}
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mt-32 {
+  margin-top: 32px;
+}
+.mt-40 {
+  margin-top: 40px;
+}
+.mt-48 {
+  margin-top: 48px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mt-56 {
+  margin-top: 56px;
+}
+.mt-64 {
+  margin-top: 64px;
+}
+.mt-70 {
+  margin-top: 70px;
+}
+
+/* --- Fluid margins --- */
+.mb-fluid-12-26 {
+  margin-bottom: clamp(12px, 3vw, 26px);
+}
+.mb-fluid-16-26 {
+  margin-bottom: clamp(16px, 3vw, 26px);
+}
+.mb-fluid-16-32 {
+  margin-bottom: clamp(1rem, calc(1rem + (2rem - 1rem) * ((100vw - 380px) / 1540)), 2rem);
+}
+.mb-fluid-20-32 {
+  margin-bottom: clamp(20px, 0.78vw + 17.04px, 32px);
+}
+.mb-fluid-24-34 {
+  margin-bottom: clamp(24px, 2vw + 8px, 34px);
+}
+.mb-fluid-24-40 {
+  margin-bottom: clamp(24px, 20px + 1.04vw, 40px);
+}
+.mb-fluid-24-48 {
+  margin-bottom: clamp(24px, 1.25vw + 19px, 48px);
+}
+.mb-fluid-32-40 {
+  margin-bottom: clamp(32px, 0.5vw + 31px, 40px);
+}
+.mb-fluid-32-50 {
+  margin-bottom: clamp(32px, 1.5vw + 20px, 50px);
+}
+.mb-fluid-32-56 {
+  margin-bottom: clamp(32px, 2.5vw + 8px, 56px);
+}
+.mb-fluid-32-130 {
+  margin-bottom: clamp(32px, 6.36vw + 7.83px, 130px);
+}
+.mb-fluid-48-117 {
+   margin-bottom: clamp(48px, 8vw, 117px);
+ }
+.mb-fluid-50-80 {
+  margin-bottom: clamp(50px, 4.7vw + 28px, 80px);
+}
+.mb-fluid-80-130 {
+  margin-bottom: clamp(80px, 5.8vw + 19px, 130px);
+}
+.mb-fluid-80-100 {
+  margin-bottom: clamp(80px, calc(80px + (100 - 80) * ((100vw - 380px) / (1920 - 380))), 100px);
+}
+.mb-fluid-112-130 {
+  margin-bottom: clamp(112px, 7.83vw, 130px);
+}
+.mb-fluid-176-320 {
+  margin-bottom: clamp(176px, 10vw + 96px, 320px);
+}
+
+.mt-fluid-12-26 {
+  margin-top: clamp(12px, 3vw, 26px);
+}
+.mt-fluid-16-26 {
+  margin-top: clamp(16px, 3vw, 26px);
+}
+.mt-fluid-20-32 {
+  margin-top: clamp(20px, 0.78vw + 17.04px, 32px);
+}
+.mt-fluid-24-34 {
+  margin-top: clamp(24px, 2vw + 8px, 34px);
+}
+.mt-fluid-24-48 {
+  margin-top: clamp(24px, 1.25vw + 19px, 48px);
+}
+.mt-fluid-32-40 {
+  margin-top: clamp(32px, 0.5vw + 31px, 40px);
+}
+.mt-fluid-32-50 {
+  margin-top: clamp(32px, 1.5vw + 20px, 50px);
+}
+.mt-fluid-32-56 {
+  margin-top: clamp(32px, 2.5vw + 8px, 56px);
+}
+.mt-fluid-32-130 {
+  margin-top: clamp(32px, 6.36vw + 7.83px, 130px);
+}
+.mt-fluid-80-130 {
+  margin-top: clamp(80px, 5.8vw + 19px, 130px);
+}
+.mt-fluid-48-117 {
+  margin-top: clamp(48px, 8vw, 117px);
+}
+.mt-fluid-112-130 {
+  margin-top: clamp(112px, 7.83vw, 130px);
+}
+
+/* --- Fluid margins (reverse) --- */
+.mb-fluid-26-12 {
+  margin-bottom: clamp(26px, -3vw + 69.6px, 12px);
+}
+.mb-fluid-26-16 {
+  margin-bottom: clamp(26px, -3vw + 73.6px, 16px);
+}
+.mb-fluid-32-20 {
+  margin-bottom: clamp(20px, -0.78vw + 34.96px, 32px);
+}
+.mb-fluid-34-24 {
+  margin-bottom: clamp(34px, -2vw + 62.4px, 24px);
+}
+.mb-fluid-48-24 {
+  margin-bottom: clamp(48px, -1.25vw + 48px, 24px);
+}
+.mb-fluid-40-32 {
+  margin-bottom: clamp(40px, -0.5vw + 41.6px, 32px);
+}
+.mb-fluid-50-32 {
+  margin-bottom: clamp(50px, -1.5vw + 60.8px, 32px);
+}
+.mb-fluid-56-32 {
+  margin-bottom: clamp(56px, -2.5vw + 80px, 32px);
+}
+.mb-fluid-80-50 {
+  margin-bottom: clamp(50px, -4.7vw + 138px, 80px);
+}
+.mb-fluid-130-80 {
+  margin-bottom: clamp(130px, -5.8vw + 191.36px, 80px);
+}
+.mb-fluid-117-48 {
+  margin-bottom: clamp(117px, -8vw + 201.6px, 48px);
+}
+.mb-fluid-130-112 {
+  margin-bottom: clamp(130px, -7.83vw + 262.34px, 112px);
+}
+
+.mt-fluid-26-12 {
+  margin-top: clamp(26px, -3vw + 69.6px, 12px);
+}
+.mt-fluid-26-16 {
+  margin-top: clamp(26px, -3vw + 73.6px, 16px);
+}
+.mt-fluid-34-24 {
+  margin-top: clamp(34px, -2vw + 62.4px, 24px);
+}
+.mt-fluid-48-24 {
+  margin-top: clamp(48px, -1.25vw + 48px, 24px);
+}
+.mt-fluid-40-32 {
+  margin-top: clamp(40px, -0.5vw + 41.6px, 32px);
+}
+.mt-fluid-50-32 {
+  margin-top: clamp(50px, -1.5vw + 60.8px, 32px);
+}
+.mt-fluid-56-32 {
+  margin-top: clamp(56px, -2.5vw + 80px, 32px);
+}
+.mt-fluid-130-80 {
+  margin-top: clamp(130px, -5.8vw + 191.36px, 80px);
+}
+.mt-fluid-117-48 {
+  margin-top: clamp(117px, -8vw + 201.6px, 48px);
+}
+.mt-fluid-130-112 {
+  margin-top: clamp(130px, -7.83vw + 262.34px, 112px);
+}
+
+/* === PADDINGS === */
+
+/* --- Fixed paddings --- */
+.pb-8 {
+  padding-bottom: 8px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+.pb-12 {
+  padding-bottom: 12px;
+}
+.pb-16 {
+  padding-bottom: 16px;
+}
+.pb-24 {
+  padding-bottom: 24px;
+}
+.pb-30 {
+  padding-bottom: 30px;
+}
+.pb-32 {
+  padding-bottom: 32px;
+}
+.pb-40 {
+  padding-bottom: 40px;
+}
+.pb-48 {
+  padding-bottom: 48px;
+}
+.pb-50 {
+  padding-bottom: 50px;
+}
+.pb-56 {
+  padding-bottom: 56px;
+}
+.pb-64 {
+  padding-bottom: 64px;
+}
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pt-8 {
+  padding-top: 8px;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+.pt-12 {
+  padding-top: 12px;
+}
+.pt-16 {
+  padding-top: 16px;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.pt-30 {
+  padding-top: 30px;
+}
+.pt-32 {
+  padding-top: 32px;
+}
+.pt-40 {
+  padding-top: 40px;
+}
+.pt-48 {
+  padding-top: 48px;
+}
+.pt-50 {
+  padding-top: 50px;
+}
+.pt-56 {
+  padding-top: 56px;
+}
+.pt-64 {
+  padding-top: 64px;
+}
+.pt-70 {
+  padding-top: 70px;
+}
+
+/* --- Fluid paddings --- */
+.pb-fluid-12-26 {
+  padding-bottom: clamp(12px, 3vw, 26px);
+}
+.pb-fluid-16-26 {
+  padding-bottom: clamp(16px, 3vw, 26px);
+}
+.pb-fluid-24-34 {
+  padding-bottom: clamp(24px, 2vw + 8px, 34px);
+}
+.pb-fluid-24-48 {
+  padding-bottom: clamp(24px, 1.25vw + 19px, 48px);
+}
+.pb-fluid-32-40 {
+  padding-bottom: clamp(32px, 0.5vw + 31px, 40px);
+}
+.pb-fluid-32-50 {
+  padding-bottom: clamp(32px, 1.5vw + 20px, 50px);
+}
+.pb-fluid-32-56 {
+  padding-bottom: clamp(32px, 2.5vw + 8px, 56px);
+}
+.pb-fluid-80-130 {
+  padding-bottom: clamp(80px, 5.8vw + 19px, 130px);
+}
+.pb-fluid-147-130 {
+  padding-bottom: clamp(80px, 3.25vw + 67.65px, 130px);
+}
+.pb-fluid-48-117 {
+  padding-bottom: clamp(48px, 8vw, 117px);
+}
+.pb-fluid-112-130 {
+  padding-bottom: clamp(112px, 7.83vw, 130px);
+}
+
+.pt-fluid-12-26 {
+  padding-top: clamp(12px, 3vw, 26px);
+}
+.pt-fluid-16-26 {
+  padding-top: clamp(16px, 3vw, 26px);
+}
+.pt-fluid-24-34 {
+  padding-top: clamp(24px, 2vw + 8px, 34px);
+}
+.pt-fluid-24-48 {
+  padding-top: clamp(24px, 1.25vw + 19px, 48px);
+}
+.pt-fluid-32-40 {
+  padding-top: clamp(32px, 0.5vw + 31px, 40px);
+}
+.pt-fluid-32-50 {
+  padding-top: clamp(32px, 1.5vw + 20px, 50px);
+}
+.pt-fluid-32-56 {
+  padding-top: clamp(32px, 2.5vw + 8px, 56px);
+}
+.pt-fluid-80-130 {
+  padding-top: clamp(80px, 5.8vw + 19px, 130px);
+}
+.pt-fluid-147-130 {
+  padding-top: clamp(80px, 3.25vw + 67.65px, 130px);
+}
+.pt-fluid-48-117 {
+  padding-top: clamp(48px, 8vw, 117px);
+}
+.pt-fluid-112-130 {
+  padding-top: clamp(112px, 7.83vw, 130px);
+}
+
+/* --- Fluid paddings (reverse) --- */
+.pb-fluid-26-12 {
+  padding-bottom: clamp(26px, -3vw + 69.6px, 12px);
+}
+.pb-fluid-26-16 {
+  padding-bottom: clamp(26px, -3vw + 73.6px, 16px);
+}
+.pb-fluid-34-24 {
+  padding-bottom: clamp(34px, -2vw + 62.4px, 24px);
+}
+.pb-fluid-48-24 {
+  padding-bottom: clamp(48px, -1.25vw + 48px, 24px);
+}
+.pb-fluid-40-32 {
+  padding-bottom: clamp(40px, -0.5vw + 41.6px, 32px);
+}
+.pb-fluid-50-32 {
+  padding-bottom: clamp(50px, -1.5vw + 60.8px, 32px);
+}
+.pb-fluid-56-32 {
+  padding-bottom: clamp(56px, -2.5vw + 80px, 32px);
+}
+.pb-fluid-130-80 {
+  padding-bottom: clamp(130px, -5.8vw + 191.36px, 80px);
+}
+.pb-fluid-117-48 {
+  padding-bottom: clamp(117px, -8vw + 201.6px, 48px);
+}
+.pb-fluid-130-112 {
+  padding-bottom: clamp(130px, -7.83vw + 262.34px, 112px);
+}
+
+.pt-fluid-26-12 {
+  padding-top: clamp(26px, -3vw + 69.6px, 12px);
+}
+.pt-fluid-26-16 {
+  padding-top: clamp(26px, -3vw + 73.6px, 16px);
+}
+.pt-fluid-34-24 {
+  padding-top: clamp(34px, -2vw + 62.4px, 24px);
+}
+.pt-fluid-48-24 {
+  padding-top: clamp(48px, -1.25vw + 48px, 24px);
+}
+.pt-fluid-40-32 {
+  padding-top: clamp(40px, -0.5vw + 41.6px, 32px);
+}
+.pt-fluid-50-32 {
+  padding-top: clamp(50px, -1.5vw + 60.8px, 32px);
+}
+.pt-fluid-56-32 {
+  padding-top: clamp(56px, -2.5vw + 80px, 32px);
+}
+.pt-fluid-130-80 {
+  padding-top: clamp(130px, -5.8vw + 191.36px, 80px);
+}
+.pt-fluid-117-48 {
+  padding-top: clamp(117px, -8vw + 201.6px, 48px);
+}
+.pt-fluid-130-112 {
+  padding-top: clamp(130px, -7.83vw + 262.34px, 112px);
+}

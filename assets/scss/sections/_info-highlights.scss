@@ -1,0 +1,77 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+
+.info-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  background-color: var(--color-bg-secondary, #f5f4fa);
+  border-radius: var(--radius-lg, 20px);
+  padding: 16px 24px;
+
+  &__item {
+    flex: 1 1 240px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: var(--radius-md, 16px);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+  }
+
+  &__content,
+  &__text {
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: -0.04em;
+    color: var(--color-text-muted, #96989c);
+  }
+  &__title {
+    font-size: 1.125rem;
+    margin-bottom: 4px;
+    color: var(--color-text-primary, #2b2b2b);
+  }
+
+  // Modifier classes: no logic changed
+  &--main {
+    margin-top: clamp(10px, 2.5vw, 56px);
+  }
+
+  &--main-alt {
+    margin-top: 10px;
+  }
+
+  &--about {
+    margin-top: 40px;
+  }
+
+  &--support {
+    margin-top: clamp(27px, calc(1.1vw + 22px), 40px);
+  }
+
+  &--personal {
+    padding: 24px;
+
+    .info-highlights__item {
+      flex: 1 1 320px;
+    }
+  }
+}
+
+// Media queries: only where needed!
+@include media.respond-max($bp-sm) {
+  .info-highlights--about {
+    margin-top: 80px;
+  }
+}
+
+// Standalone title outside main block
+.info-highlights-personal__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04;
+  margin-top: clamp(32px, 4vw, 50px);
+}

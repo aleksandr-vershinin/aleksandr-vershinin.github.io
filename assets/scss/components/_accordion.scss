@@ -1,0 +1,80 @@
+/* ===== Accordion ===== */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: clamp(32px, calc(0.5vw + 31px), 40px);
+
+  &__item {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md, 16px);
+    overflow: hidden;
+    border: 1px solid var(--color-border, #eff0f3);
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-text-primary, #2b2b2b);
+    cursor: pointer;
+    list-style: none;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: #e9e6f4;
+    }
+  }
+
+  &__summary svg {
+    width: 14px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    padding: 0 24px 20px;
+    color: var(--color-text-secondary, #595959);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* добавить в конец блока .accordion {...} */
+.accordion {
+  /* плавность */
+  &__item,
+  &__summary,
+  &__content {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  /* === Открытый пункт === */
+  &__item[open] {
+    background-color: #e9e6f4; /* как hover */
+    border-color: #e9e6f4; /* чтобы рамка не резала глаз */
+  }
+
+  /* шапка «сливается» с фоном открытого пункта */
+  &__item[open] &__summary {
+    background-color: transparent;
+    padding-bottom: 12px; /* как на макете, место под внутреннюю карточку */
+  }
+
+  /* внутри — светлая панель с собственным скруглением и рамкой */
+  &__item[open] &__content {
+    background-color: var(--color-bg-secondary, #f5f4fa);
+    border: 1px solid var(--color-border, #eff0f3);
+    border-radius: 12px;
+    margin: 0 6px 6px;
+    padding: 16px 24px 20px; /* сохраняем вашу типографику */
+  }
+
+  /* не затемняем шапку при hover в открытом состоянии */
+  &__item[open] &__summary:hover {
+    background-color: transparent;
+  }
+}

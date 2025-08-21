@@ -1,0 +1,100 @@
+/* =========================================
+   Filter Chip (selectable pill button)
+   Usage: <button class="filter-chip" type="button" aria-pressed="false">Text</button>
+   States:
+     [aria-pressed="true"]  selected
+     :hover                 hover affordance
+     :focus-visible         keyboard ring
+   Optional icon slot: <svg class="filter-chip__icon">
+   ========================================= */
+
+.filter-chip {
+  --filter-pad-inline: 16px;
+  --filter-pad-block: 12px;
+  --filter-gap: 8px;
+  --filter-radius: var(--radius-md, 16px);
+  --filter-fs: 1.125rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--filter-gap);
+  padding-block: var(--filter-pad-block);
+  padding-inline: var(--filter-pad-inline);
+  font-size: var(--filter-fs);
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--color-text-secondary, #595959);
+  background-color: var(--color-bg-secondary, #f5f4fa);
+  border: 1px solid var(--color-border, #eff0f3);
+  border-radius: var(--filter-radius);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.12s ease, color 0.12s ease,
+    border-color 0.12s ease;
+  text-decoration: none; /* safe if <a> */
+
+  /* icon slot */
+  &__icon {
+    inline-size: 1em;
+    block-size: 1em;
+    flex-shrink: 0;
+    display: inline-block;
+    fill: currentColor;
+  }
+
+  /* hover (не действует на активный) */
+  &:hover:not([aria-pressed="true"]):not(.is-active) {
+    background-color: var(--color-bg-hover, #e9e6f4);
+  }
+
+  /* focus ring */
+  &:focus-visible {
+    outline: 2px solid var(--color-accent, #ee8a2c);
+    outline-offset: 2px;
+  }
+
+  /* selected */
+  &[aria-pressed="true"],
+  &.is-active {
+    background-color: var(--color-accent, #ee8a2c);
+    border-color: var(--color-accent, #ee8a2c);
+    color: #fff; /* влияет и на текст, и на иконку при currentColor */
+    /* keep same padding to avoid layout jump */
+  }
+}
+
+/* активный чип при hover не меняется */
+.filter-chip[aria-pressed="true"]:hover,
+.filter-chip.is-active:hover {
+  background-color: var(--color-accent, #ee8a2c);
+  border-color: var(--color-accent, #ee8a2c);
+  color: #fff;
+}
+
+/* Явные цвета иконок для неактивных/активных чипов */
+.filter-chip {
+  /* НЕактивный: серые иконки */
+  &:not([aria-pressed="true"]):not(.is-active) {
+    svg [fill]:not([fill="none"]) {
+      fill: #595959 !important;
+    }
+    svg [stroke] {
+      stroke: #595959 !important;
+    }
+  }
+
+  /* Активный: белые иконки (следуют за currentColor) */
+  &[aria-pressed="true"],
+  &.is-active {
+    /* дублируем на случай переопределений выше */
+    color: #fff;
+
+    svg [fill]:not([fill="none"]) {
+      fill: currentColor !important;
+    }
+    svg [stroke] {
+      stroke: currentColor !important;
+    }
+  }
+}

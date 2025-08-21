@@ -1,0 +1,147 @@
+.person-card {
+  position: relative;
+  overflow: hidden;
+  width: 325px;
+  height: 371px;
+  border-radius: 32px;
+  background: none;
+  display: flex;
+  flex-direction: column;
+
+  &__photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100px; /* blur height */
+      pointer-events: none;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
+
+    &::before {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 1;
+
+      mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 40%,
+        rgba(0, 0, 0, 0.6) 75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 40%,
+        rgba(0, 0, 0, 0.6) 75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+
+    &::after {
+      background: linear-gradient(
+        178.37deg,
+        rgba(192, 140, 63, 0) 1.27%,
+        #39270e 116.64%
+      );
+      opacity: 0.9;
+      z-index: 2;
+    }
+
+    @supports not (backdrop-filter: blur(1px)) {
+      &::before {
+        display: none;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  &__name,
+  &__position {
+    position: absolute;
+    left: 1rem;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &__name {
+    bottom: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__position {
+    bottom: 1rem;
+    margin-top: 4px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.04em;
+  }
+
+  &--blur-soft {
+    .person-card__photo-wrapper::before {
+      height: 140px;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 30%,
+        rgba(0, 0, 0, 0.6) 80%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 30%,
+        rgba(0, 0, 0, 0.6) 80%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+}
+
+.person-card__desc {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  max-width: 90%;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  z-index: 3;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.person-card--team {
+  position: relative;
+  overflow: hidden;
+  width: 325px;
+  height: 433px;
+  border-radius: 20px;
+  background: none;
+  display: flex;
+  flex-direction: column;
+}

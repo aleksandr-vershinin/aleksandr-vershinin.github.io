@@ -1,0 +1,13 @@
+.meta-info {
+  display: flex;
+  gap: 8px;
+}
+
+.meta-info__tag {
+  text-transform: capitalize;
+  color: var(--color-blue, #4c9eff);
+}
+
+.meta-info__date {
+  color: var(--color-text-muted-alt, #9a9a9a);
+}

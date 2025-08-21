@@ -1,0 +1,153 @@
+.vip-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-secondary, #F5F4FA);
+  border-radius: var(--radius-lgm, 20px);
+  width: 325px;
+  min-height: 432px;
+  overflow: hidden;
+
+  &__image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 325 / 231;
+    background: #E9E6F4;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    // Модификаторы для позиционирования разных SVG
+    &.svg-1 {
+      left: 1%;
+      top: 1%;
+    }
+
+    &.svg-2 {
+      left: 12px;
+      top: 18px;
+      transform: rotate(55deg);
+    }
+
+    &.svg-3 {
+      left: -2px;
+      top: 18px;
+    }
+
+    &.svg-4 {
+      left: 15%;
+      top: 12%;
+      width: 226px;
+      height: 130px
+    }
+
+    &.svg-7 {
+      left: 15%;
+      top: 12%;
+      width: 292px;
+    }
+    // и т.д.
+  }
+
+  &__photo {
+    position: relative;
+    z-index: 2;
+
+    object-fit: contain;
+    margin-bottom: 0; // если нужно "вылезать", делай отрицательный
+
+    &--1 {
+      width: 325px;
+      height: auto;
+      filter: drop-shadow(6px 6px 10.1px rgba(55, 75, 141, 0.26));
+    }
+
+    &--2 {
+      position: absolute;
+      width: 252px;
+      height: auto;
+      left: 11%;
+      top: 8%;
+      filter: drop-shadow(6px 6px 10.1px rgba(141, 101, 53, 0.21));
+    }
+
+    &--4 {
+      position: absolute;
+      width: 312px;
+      height: auto;
+      left: 0;
+      top: 4%;
+      filter: drop-shadow(6px 6px 10.1px rgba(141, 101, 53, 0.21));
+    }
+
+    &--5 {
+      position: absolute;
+      width: 290px;
+      height: auto;
+      left: 0;
+      top: 8%;
+      filter: drop-shadow(6px 6px 10.1px rgba(141, 101, 53, 0.21));
+    }
+
+    &--6 {
+      position: absolute;
+      width: 313px;
+      height: auto;
+      left: 0;
+      top: 15%;
+      filter: drop-shadow(6px 6px 10.1px rgba(141, 101, 53, 0.21));
+    }
+
+    &--7 {
+      position: absolute;
+      width: 313px;
+      height: auto;
+      left: 0;
+      top: 15%;
+      filter: drop-shadow(6px 6px 10.1px rgba(141, 101, 53, 0.21));
+    }
+  }
+
+
+  &__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20px;
+    padding-bottom: 20px;
+    padding-top: 16px;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--color-text-primary, #2b2b2b);
+  }
+
+  &__desc {
+    font-size: 1rem;
+    color: #96989C;
+    display: -webkit-box;
+    //-webkit-line-clamp: 4; // если хочешь ограничить число строк
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.vip-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}

@@ -1,0 +1,215 @@
+:root {
+  --cert-slider-width: 1360px;
+  --cert-slider-gap: 32px;
+
+  --cert-arrow-size: 65.33px;
+  --cert-arrow-size-mobile: 56px;
+  --cert-arrow-border: 1.17px solid #e5e7eb;
+
+  --cert-slide-w: 210px; /* desktop */
+  --cert-radius: 16px;
+}
+
+/* контейнер */
+.certificates-slider {
+  &__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 2.3vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-text, #1a1a1a);
+  }
+
+  &__image-wrapper {
+    width: var(--cert-slider-width);
+    max-width: 100vw;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  /* дорожка/слайды */
+  &__track {
+    display: flex;
+    transition: transform .3s;
+    will-change: transform;
+  }
+
+  &__slide {
+    width: var(--cert-slide-w);
+    aspect-ratio: 210 / 300; /* высота считается автоматически */
+    border-radius: var(--cert-radius);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: inherit;
+  }
+
+  /* активный — тонкий акцент */
+  &__slide.is-active {
+    outline: 4px solid #7B61FF; /* подгони цвет, если нужно */
+    outline-offset: -4px;
+  }
+
+  /* стрелки */
+  &__arrow {
+    width: var(--cert-arrow-size);
+    height: var(--cert-arrow-size);
+    min-width: var(--cert-arrow-size);
+    min-height: var(--cert-arrow-size);
+    border: var(--cert-arrow-border);
+    padding: 0;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    transition: background .18s, border-color .18s;
+
+    svg {
+      width: 18px !important;
+      height: 17px !important;
+      display: block;
+      pointer-events: none;
+    }
+
+    svg path {
+      stroke: #96989c;
+    }
+
+    &:not(.is-disabled) {
+      background: #f5f4fa;
+
+      svg path {
+        stroke: #2b2b2b;
+      }
+    }
+
+    &:disabled, &.is-disabled {
+      background: #fff;
+      opacity: .4;
+      pointer-events: none;
+    }
+  }
+}
+
+/* ≥1601px — стрелки по бокам */
+@media (min-width: 1601px) {
+  .certificates-slider__arrow.desktop-only {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .certificates-slider__arrow--prev.desktop-only {
+    left: calc(50% - (var(--cert-slider-width) / 2) - var(--cert-slider-gap) - var(--cert-arrow-size));
+  }
+  .certificates-slider__arrow--next.desktop-only {
+    right: calc(50% - (var(--cert-slider-width) / 2) - var(--cert-slider-gap) - var(--cert-arrow-size));
+  }
+}
+
+/* ≤1600px — стрелки снизу */
+@media (max-width: 1600px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+  }
+
+  .certificates-slider__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .certificates-slider__image-wrapper {
+    width: 100%;
+    max-width: 100vw;
+  }
+  .certificates-slider__arrows {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 32px;
+    width: 100%;
+  }
+  .certificates-slider__arrow {
+    position: static !important;
+    margin: 0 8px;
+    transform: none;
+  }
+}
+
+/* мобилка — ширина карточки 328 */
+@media (max-width: 1023px) {
+  :root {
+    --cert-slide-w: 328px;
+  }
+  .certificates-slider__arrows {
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .certificates-slider__arrow {
+    width: var(--cert-arrow-size-mobile);
+    height: var(--cert-arrow-size-mobile);
+    min-width: var(--cert-arrow-size-mobile);
+    min-height: var(--cert-arrow-size-mobile);
+  }
+}
+
+/* пагинация */
+.certificates-slider__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 0;
+  user-select: none;
+  margin-top: 24px;
+}
+
+.certificates-slider__dot {
+  width: 8px;
+  height: 8px;
+  background: #e9e6f4;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transition: width .18s ease, background-color .18s ease, border-radius .18s ease;
+}
+
+.certificates-slider__dot::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+}
+
+.certificates-slider__dot.is-active {
+  width: 24px;
+  height: 8px;
+  border-radius: 999px;
+  background: #595959;
+}
+
+.certificates-slider__dot:focus-visible {
+  outline: 2px solid #595959;
+  outline-offset: 2px;
+}

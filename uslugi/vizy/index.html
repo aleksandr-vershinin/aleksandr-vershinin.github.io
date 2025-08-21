@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Визы — Манго ДВ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/scss/compiled-style.css" />
+
+    <script src="/assets/js/filter-chips-toggle.js" defer></script>
+    <script src="/assets/js/main-nav-submenu.js" defer></script>
+    <script src="/assets/js/form-move.js" defer></script>
+    <script src="/assets/js/swiper-bundle.min.js" defer></script>
+    <script src="/assets/js/swiper-init.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <header class="site-header mt-16 mb-32" role="banner">
+          <div class="site-header__container">
+            <a class="site-header__logo" href="/">
+              <img src="/assets/images/logos/logo.png" alt="Логотип Манго ДВ" />
+            </a>
+
+            <!-- Кнопка бургер -->
+            <button
+              type="button"
+              class="site-header__burger"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="main-menu"
+            ></button>
+
+            <nav class="main-nav" role="navigation" aria-label="Основное меню">
+              <ul class="main-nav__menu" id="main-menu">
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    Туры по направлениям
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/goryashchie/"
+                          >Горящие туры</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-stranam/"
+                          >По странам</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-kitayu/"
+                          >По Китаю</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-rossii/"
+                          >По России</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-dv/"
+                          >По ДВ</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    Виды отдыха
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/vidy-otdykha/plyazhnye/"
+                          >Пляжный отдых</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/vidy-otdykha/ekskursii-odnogo-dnya/"
+                          >Экскурсии одного дня</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/vidy-otdykha/shkolnye-tury-i-lagerya/"
+                          >Школьные и детские туры</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/vidy-otdykha/vip/"
+                          >ВИП-туры</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    Услуги и бонусы
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/vizy/"
+                          >Визы</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/aviabilety/"
+                          >Авиабилеты</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/premium/"
+                          >Премиум-сервис в путеествии</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/podderzhka/"
+                          >Поддержка туристов</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/uslugi/programma-loyalnosti/"
+                          >Программа лояльности</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    О нас
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/o-kompanii/"
+                          >О компании</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/otzyvy/"
+                          >Отзывы</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/komanda/"
+                          >Команда</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/kontakty/"
+                          >Контакты</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/novosti/"
+                          >Новости</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="/agenstvam/">Агенствам</a>
+                </li>
+              </ul>
+            </nav>
+
+            <button type="button" class="site-header__contact">
+              +7 (800) 600 84 64
+            </button>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <!-- breadcrumbs -->
+    <div class="wrapper">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="breadcrumbs">
+          <svg
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M7 1L1 7L7 13"
+              stroke="#96989C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <a class="breadcrumbs__link" href="/" rel="home"
+            >Вернуться на Главную</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <h2 class="personal-services__title mb-fluid-24-34">Визы</h2>
+          <p class="personal-services__description mb-fluid-32-40">
+            Возьмём на себя ваши хлопоты, связанные с оформлением визы. Большой
+            опыт и знание всех нюансов визовой политики гарантируют высокую
+            вероятность положительного решения даже в сложных случаях.
+          </p>
+
+          <div class="info-highlights info-highlights--personal mb-fluid-32-40">
+            <div class="info-highlights__item">
+              <div class="info-highlights__icon">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 0C23.2843 1.93277e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C12.6005 30 10.3325 29.4363 8.32129 28.4346C6.80301 27.6784 4.75416 28.7281 3.25977 29.1279C1.81047 29.5155 0.484517 28.1895 0.87207 26.7402C1.27192 25.2458 2.32156 23.197 1.56543 21.6787C0.563662 19.6675 5.59828e-08 17.3995 0 15C0 6.71573 6.71573 0 15 0ZM19.3057 10.6533C18.7811 10.2745 18.0616 10.3618 17.6406 10.835L17.5605 10.9355L13.4473 16.6289L11.7725 14.7148L11.6836 14.623C11.2204 14.1908 10.4959 14.1706 10.0088 14.5967C9.52187 15.0229 9.4447 15.7443 9.81152 16.2607L9.8916 16.3613L12.1895 18.9873L12.334 19.1348C13.0925 19.8213 14.304 19.713 14.9209 18.8594L19.5869 12.3984C19.9908 11.8389 19.8651 11.0575 19.3057 10.6533Z"
+                    fill="url(#paint0_linear_806_14708)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_806_14708"
+                      x1="-34.7279"
+                      y1="47.5763"
+                      x2="73.9487"
+                      y2="51.9734"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#FD6E48" />
+                      <stop offset="0.533654" stop-color="#FF6BC8" />
+                      <stop offset="0.9743" stop-color="#9427FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="info-highlights__content">
+                <h3 class="info-highlights__title">
+                  Предложим дополнительные услуги
+                </h3>
+                <p class="info-highlights__text">
+                  Если вы хотите получить от своего путешествия максимум эмоций
+                  или сделать его более комфортным
+                </p>
+              </div>
+            </div>
+
+            <div class="info-highlights__item">
+              <div class="info-highlights__icon">
+                <svg
+                  width="32"
+                  height="29"
+                  viewBox="0 0 32 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.65723 0C7.52248 0 8.35852 0.315791 9.00781 0.887695L13.0479 4.44629C13.6971 5.01795 14.5324 5.33297 15.3975 5.33301H28.4443C30.4079 5.33302 31.9999 6.92511 32 8.88867V24.8887C32 26.8523 30.408 28.4443 28.4443 28.4443H3.55566C1.59199 28.4443 0 26.8523 0 24.8887V3.55566C0 1.59199 1.59199 0 3.55566 0H6.65723ZM19.8311 12.3193C19.2715 11.9156 18.4901 12.0422 18.0859 12.6016L14.9795 16.9014L13.8467 15.6064C13.3921 15.0873 12.6024 15.0349 12.083 15.4893C11.5963 15.9154 11.5192 16.6359 11.8857 17.1523L11.9658 17.2529L13.8037 19.3535C14.5014 20.1509 15.7594 20.0922 16.3799 19.2334L20.1133 14.0645C20.5169 13.5048 20.3905 12.7234 19.8311 12.3193Z"
+                    fill="url(#paint0_linear_806_14725)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_806_14725"
+                      x1="-37.0431"
+                      y1="45.1092"
+                      x2="78.8284"
+                      y2="50.3834"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#FD6E48" />
+                      <stop offset="0.533654" stop-color="#FF6BC8" />
+                      <stop offset="0.9743" stop-color="#9427FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="info-highlights__content">
+                <h3 class="info-highlights__title">
+                  Учтём все ваши личные предпочтения
+                </h3>
+                <p class="info-highlights__text">
+                  Предложим уникальный маршрут — или поможем воплотить мечту,
+                  вроде визита на шоу любимой звезды
+                </p>
+              </div>
+            </div>
+
+            <div class="info-highlights__item">
+              <div class="info-highlights__icon">
+                <svg
+                  width="41"
+                  height="40"
+                  viewBox="0 0 41 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 36H35"
+                    stroke="url(#paint0_linear_806_14692)"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.19899 20.3371C8.43124 21.1059 8 22.148 8 23.2346V25.8C8 26.9201 8 27.4802 8.21799 27.908C8.40973 28.2843 8.71569 28.5903 9.09202 28.782C9.51984 29 10.0799 29 11.2 29H13.8007C14.8883 29 15.9313 28.5678 16.7001 27.7985L33.7999 10.6889C35.4 9.08782 35.4 6.49277 33.7999 4.89172L32.1107 3.20153C30.5091 1.59906 27.9116 1.59955 26.3107 3.20263L9.19899 20.3371Z"
+                    fill="url(#paint1_linear_806_14692)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_806_14692"
+                      x1="-27.5703"
+                      y1="37.5859"
+                      x2="16.7034"
+                      y2="89.5338"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#FD6E48" />
+                      <stop offset="0.533654" stop-color="#FF6BC8" />
+                      <stop offset="0.9743" stop-color="#9427FF" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_806_14692"
+                      x1="-23.2551"
+                      y1="44.8187"
+                      x2="74.5539"
+                      y2="48.776"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#FD6E48" />
+                      <stop offset="0.533654" stop-color="#FF6BC8" />
+                      <stop offset="0.9743" stop-color="#9427FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="info-highlights__content">
+                <h3 class="info-highlights__title">
+                  Учтём все ваши личные предпочтения
+                </h3>
+                <p class="info-highlights__text">
+                  Предложим уникальный маршрут — или поможем воплотить мечту,
+                  вроде визита на шоу любимой звезды
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passports -->
+      <div class="wrapper">
+        <div class="container">
+          <section class="side-banner side-banner--passports mb-fluid-32-50">
+            <div class="side-banner__inner">
+              <div class="side-banner__stars">
+                <svg
+                  class="glowing-star glowing-star-1"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_1204_12534)">
+                    <path
+                      d="M22.1243 13.069C22.7686 11.3278 25.2314 11.3278 25.8757 13.069L28.0023 18.8161C28.2049 19.3635 28.6365 19.7951 29.1839 19.9977L34.931 22.1243C36.6722 22.7686 36.6722 25.2314 34.931 25.8757L29.1839 28.0023C28.6365 28.2049 28.2049 28.6365 28.0023 29.1839L25.8757 34.931C25.2314 36.6722 22.7686 36.6722 22.1243 34.931L19.9977 29.1839C19.7951 28.6365 19.3635 28.2049 18.8161 28.0023L13.069 25.8757C11.3278 25.2314 11.3278 22.7686 13.069 22.1243L18.8161 19.9977C19.3635 19.7951 19.7951 19.3635 19.9977 18.8161L22.1243 13.069Z"
+                      fill="white"
+                    />
+                  </g>
+                  <path
+                    d="M22.1243 11.069C22.9106 8.94403 23.3038 7.88154 24 7.88154C24.6962 7.88154 25.0894 8.94403 25.8757 11.069L28.0023 16.8161C28.1593 17.2404 28.2378 17.4526 28.3926 17.6074C28.5474 17.7622 28.7596 17.8407 29.1839 17.9977L34.931 20.1243C37.056 20.9106 38.1185 21.3038 38.1185 22C38.1185 22.6962 37.056 23.0894 34.931 23.8757L29.1839 26.0023C28.7596 26.1593 28.5474 26.2378 28.3926 26.3926C28.2378 26.5474 28.1593 26.7596 28.0023 27.1839L25.8757 32.931C25.0894 35.056 24.6962 36.1185 24 36.1185C23.3038 36.1185 22.9106 35.056 22.1243 32.931L19.9977 27.1839C19.8407 26.7596 19.7622 26.5474 19.6074 26.3926C19.4526 26.2378 19.2404 26.1593 18.8161 26.0023L13.069 23.8757C10.944 23.0894 9.88154 22.6962 9.88154 22C9.88154 21.3038 10.944 20.9106 13.069 20.1243L18.8161 17.9977C19.2404 17.8407 19.4526 17.7622 19.6074 17.6074C19.7622 17.4526 19.8407 17.2404 19.9977 16.8161L22.1243 11.069Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_f_1204_12534"
+                      x="0.461719"
+                      y="0.463061"
+                      width="47.0766"
+                      height="47.0739"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="5.65"
+                        result="effect1_foregroundBlur_1204_12534"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <svg
+                  class="glowing-star glowing-star-2"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_1204_12534)">
+                    <path
+                      d="M22.1243 13.069C22.7686 11.3278 25.2314 11.3278 25.8757 13.069L28.0023 18.8161C28.2049 19.3635 28.6365 19.7951 29.1839 19.9977L34.931 22.1243C36.6722 22.7686 36.6722 25.2314 34.931 25.8757L29.1839 28.0023C28.6365 28.2049 28.2049 28.6365 28.0023 29.1839L25.8757 34.931C25.2314 36.6722 22.7686 36.6722 22.1243 34.931L19.9977 29.1839C19.7951 28.6365 19.3635 28.2049 18.8161 28.0023L13.069 25.8757C11.3278 25.2314 11.3278 22.7686 13.069 22.1243L18.8161 19.9977C19.3635 19.7951 19.7951 19.3635 19.9977 18.8161L22.1243 13.069Z"
+                      fill="white"
+                    />
+                  </g>
+                  <path
+                    d="M22.1243 11.069C22.9106 8.94403 23.3038 7.88154 24 7.88154C24.6962 7.88154 25.0894 8.94403 25.8757 11.069L28.0023 16.8161C28.1593 17.2404 28.2378 17.4526 28.3926 17.6074C28.5474 17.7622 28.7596 17.8407 29.1839 17.9977L34.931 20.1243C37.056 20.9106 38.1185 21.3038 38.1185 22C38.1185 22.6962 37.056 23.0894 34.931 23.8757L29.1839 26.0023C28.7596 26.1593 28.5474 26.2378 28.3926 26.3926C28.2378 26.5474 28.1593 26.7596 28.0023 27.1839L25.8757 32.931C25.0894 35.056 24.6962 36.1185 24 36.1185C23.3038 36.1185 22.9106 35.056 22.1243 32.931L19.9977 27.1839C19.8407 26.7596 19.7622 26.5474 19.6074 26.3926C19.4526 26.2378 19.2404 26.1593 18.8161 26.0023L13.069 23.8757C10.944 23.0894 9.88154 22.6962 9.88154 22C9.88154 21.3038 10.944 20.9106 13.069 20.1243L18.8161 17.9977C19.2404 17.8407 19.4526 17.7622 19.6074 17.6074C19.7622 17.4526 19.8407 17.2404 19.9977 16.8161L22.1243 11.069Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_f_1204_12534"
+                      x="0.461719"
+                      y="0.463061"
+                      width="47.0766"
+                      height="47.0739"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="5.65"
+                        result="effect1_foregroundBlur_1204_12534"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <svg
+                  class="glowing-star glowing-star-3"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_1204_12534)">
+                    <path
+                      d="M22.1243 13.069C22.7686 11.3278 25.2314 11.3278 25.8757 13.069L28.0023 18.8161C28.2049 19.3635 28.6365 19.7951 29.1839 19.9977L34.931 22.1243C36.6722 22.7686 36.6722 25.2314 34.931 25.8757L29.1839 28.0023C28.6365 28.2049 28.2049 28.6365 28.0023 29.1839L25.8757 34.931C25.2314 36.6722 22.7686 36.6722 22.1243 34.931L19.9977 29.1839C19.7951 28.6365 19.3635 28.2049 18.8161 28.0023L13.069 25.8757C11.3278 25.2314 11.3278 22.7686 13.069 22.1243L18.8161 19.9977C19.3635 19.7951 19.7951 19.3635 19.9977 18.8161L22.1243 13.069Z"
+                      fill="white"
+                    />
+                  </g>
+                  <path
+                    d="M22.1243 11.069C22.9106 8.94403 23.3038 7.88154 24 7.88154C24.6962 7.88154 25.0894 8.94403 25.8757 11.069L28.0023 16.8161C28.1593 17.2404 28.2378 17.4526 28.3926 17.6074C28.5474 17.7622 28.7596 17.8407 29.1839 17.9977L34.931 20.1243C37.056 20.9106 38.1185 21.3038 38.1185 22C38.1185 22.6962 37.056 23.0894 34.931 23.8757L29.1839 26.0023C28.7596 26.1593 28.5474 26.2378 28.3926 26.3926C28.2378 26.5474 28.1593 26.7596 28.0023 27.1839L25.8757 32.931C25.0894 35.056 24.6962 36.1185 24 36.1185C23.3038 36.1185 22.9106 35.056 22.1243 32.931L19.9977 27.1839C19.8407 26.7596 19.7622 26.5474 19.6074 26.3926C19.4526 26.2378 19.2404 26.1593 18.8161 26.0023L13.069 23.8757C10.944 23.0894 9.88154 22.6962 9.88154 22C9.88154 21.3038 10.944 20.9106 13.069 20.1243L18.8161 17.9977C19.2404 17.8407 19.4526 17.7622 19.6074 17.6074C19.7622 17.4526 19.8407 17.2404 19.9977 16.8161L22.1243 11.069Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_f_1204_12534"
+                      x="0.461719"
+                      y="0.463061"
+                      width="47.0766"
+                      height="47.0739"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="5.65"
+                        result="effect1_foregroundBlur_1204_12534"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <svg
+                  class="glowing-star glowing-star-4"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_1204_12534)">
+                    <path
+                      d="M22.1243 13.069C22.7686 11.3278 25.2314 11.3278 25.8757 13.069L28.0023 18.8161C28.2049 19.3635 28.6365 19.7951 29.1839 19.9977L34.931 22.1243C36.6722 22.7686 36.6722 25.2314 34.931 25.8757L29.1839 28.0023C28.6365 28.2049 28.2049 28.6365 28.0023 29.1839L25.8757 34.931C25.2314 36.6722 22.7686 36.6722 22.1243 34.931L19.9977 29.1839C19.7951 28.6365 19.3635 28.2049 18.8161 28.0023L13.069 25.8757C11.3278 25.2314 11.3278 22.7686 13.069 22.1243L18.8161 19.9977C19.3635 19.7951 19.7951 19.3635 19.9977 18.8161L22.1243 13.069Z"
+                      fill="white"
+                    />
+                  </g>
+                  <path
+                    d="M22.1243 11.069C22.9106 8.94403 23.3038 7.88154 24 7.88154C24.6962 7.88154 25.0894 8.94403 25.8757 11.069L28.0023 16.8161C28.1593 17.2404 28.2378 17.4526 28.3926 17.6074C28.5474 17.7622 28.7596 17.8407 29.1839 17.9977L34.931 20.1243C37.056 20.9106 38.1185 21.3038 38.1185 22C38.1185 22.6962 37.056 23.0894 34.931 23.8757L29.1839 26.0023C28.7596 26.1593 28.5474 26.2378 28.3926 26.3926C28.2378 26.5474 28.1593 26.7596 28.0023 27.1839L25.8757 32.931C25.0894 35.056 24.6962 36.1185 24 36.1185C23.3038 36.1185 22.9106 35.056 22.1243 32.931L19.9977 27.1839C19.8407 26.7596 19.7622 26.5474 19.6074 26.3926C19.4526 26.2378 19.2404 26.1593 18.8161 26.0023L13.069 23.8757C10.944 23.0894 9.88154 22.6962 9.88154 22C9.88154 21.3038 10.944 20.9106 13.069 20.1243L18.8161 17.9977C19.2404 17.8407 19.4526 17.7622 19.6074 17.6074C19.7622 17.4526 19.8407 17.2404 19.9977 16.8161L22.1243 11.069Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_f_1204_12534"
+                      x="0.461719"
+                      y="0.463061"
+                      width="47.0766"
+                      height="47.0739"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="5.65"
+                        result="effect1_foregroundBlur_1204_12534"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <svg
+                  class="glowing-star glowing-star-5"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_1204_12534)">
+                    <path
+                      d="M22.1243 13.069C22.7686 11.3278 25.2314 11.3278 25.8757 13.069L28.0023 18.8161C28.2049 19.3635 28.6365 19.7951 29.1839 19.9977L34.931 22.1243C36.6722 22.7686 36.6722 25.2314 34.931 25.8757L29.1839 28.0023C28.6365 28.2049 28.2049 28.6365 28.0023 29.1839L25.8757 34.931C25.2314 36.6722 22.7686 36.6722 22.1243 34.931L19.9977 29.1839C19.7951 28.6365 19.3635 28.2049 18.8161 28.0023L13.069 25.8757C11.3278 25.2314 11.3278 22.7686 13.069 22.1243L18.8161 19.9977C19.3635 19.7951 19.7951 19.3635 19.9977 18.8161L22.1243 13.069Z"
+                      fill="white"
+                    />
+                  </g>
+                  <path
+                    d="M22.1243 11.069C22.9106 8.94403 23.3038 7.88154 24 7.88154C24.6962 7.88154 25.0894 8.94403 25.8757 11.069L28.0023 16.8161C28.1593 17.2404 28.2378 17.4526 28.3926 17.6074C28.5474 17.7622 28.7596 17.8407 29.1839 17.9977L34.931 20.1243C37.056 20.9106 38.1185 21.3038 38.1185 22C38.1185 22.6962 37.056 23.0894 34.931 23.8757L29.1839 26.0023C28.7596 26.1593 28.5474 26.2378 28.3926 26.3926C28.2378 26.5474 28.1593 26.7596 28.0023 27.1839L25.8757 32.931C25.0894 35.056 24.6962 36.1185 24 36.1185C23.3038 36.1185 22.9106 35.056 22.1243 32.931L19.9977 27.1839C19.8407 26.7596 19.7622 26.5474 19.6074 26.3926C19.4526 26.2378 19.2404 26.1593 18.8161 26.0023L13.069 23.8757C10.944 23.0894 9.88154 22.6962 9.88154 22C9.88154 21.3038 10.944 20.9106 13.069 20.1243L18.8161 17.9977C19.2404 17.8407 19.4526 17.7622 19.6074 17.6074C19.7622 17.4526 19.8407 17.2404 19.9977 16.8161L22.1243 11.069Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_f_1204_12534"
+                      x="0.461719"
+                      y="0.463061"
+                      width="47.0766"
+                      height="47.0739"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="5.65"
+                        result="effect1_foregroundBlur_1204_12534"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <svg
+                  class="glowing-star glowing-star-6"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_1204_12534)">
+                    <path
+                      d="M22.1243 13.069C22.7686 11.3278 25.2314 11.3278 25.8757 13.069L28.0023 18.8161C28.2049 19.3635 28.6365 19.7951 29.1839 19.9977L34.931 22.1243C36.6722 22.7686 36.6722 25.2314 34.931 25.8757L29.1839 28.0023C28.6365 28.2049 28.2049 28.6365 28.0023 29.1839L25.8757 34.931C25.2314 36.6722 22.7686 36.6722 22.1243 34.931L19.9977 29.1839C19.7951 28.6365 19.3635 28.2049 18.8161 28.0023L13.069 25.8757C11.3278 25.2314 11.3278 22.7686 13.069 22.1243L18.8161 19.9977C19.3635 19.7951 19.7951 19.3635 19.9977 18.8161L22.1243 13.069Z"
+                      fill="white"
+                    />
+                  </g>
+                  <path
+                    d="M22.1243 11.069C22.9106 8.94403 23.3038 7.88154 24 7.88154C24.6962 7.88154 25.0894 8.94403 25.8757 11.069L28.0023 16.8161C28.1593 17.2404 28.2378 17.4526 28.3926 17.6074C28.5474 17.7622 28.7596 17.8407 29.1839 17.9977L34.931 20.1243C37.056 20.9106 38.1185 21.3038 38.1185 22C38.1185 22.6962 37.056 23.0894 34.931 23.8757L29.1839 26.0023C28.7596 26.1593 28.5474 26.2378 28.3926 26.3926C28.2378 26.5474 28.1593 26.7596 28.0023 27.1839L25.8757 32.931C25.0894 35.056 24.6962 36.1185 24 36.1185C23.3038 36.1185 22.9106 35.056 22.1243 32.931L19.9977 27.1839C19.8407 26.7596 19.7622 26.5474 19.6074 26.3926C19.4526 26.2378 19.2404 26.1593 18.8161 26.0023L13.069 23.8757C10.944 23.0894 9.88154 22.6962 9.88154 22C9.88154 21.3038 10.944 20.9106 13.069 20.1243L18.8161 17.9977C19.2404 17.8407 19.4526 17.7622 19.6074 17.6074C19.7622 17.4526 19.8407 17.2404 19.9977 16.8161L22.1243 11.069Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_f_1204_12534"
+                      x="0.461719"
+                      y="0.463061"
+                      width="47.0766"
+                      height="47.0739"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="5.65"
+                        result="effect1_foregroundBlur_1204_12534"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+              <div class="ellipse14">
+                <svg
+                  width="825"
+                  height="576"
+                  viewBox="0 0 825 576"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    opacity="0.1"
+                    cx="412.5"
+                    cy="257.5"
+                    r="412.5"
+                    fill="url(#paint0_linear_695_10234)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_695_10234"
+                      x1="825"
+                      y1="257.5"
+                      x2="0"
+                      y2="257.5"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="white" stop-opacity="0" />
+                      <stop offset="1" stop-color="white" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="ellipse12">
+                <svg
+                  width="653"
+                  height="77"
+                  viewBox="0 0 653 77"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M681.295 61.3587C724.756 162.625 609.533 309.289 423.937 388.942C238.341 468.595 52.6542 451.074 9.19326 349.808C-34.2676 248.542 88.9036 238.153 274.499 158.5C257.501 -20 637.834 -39.9074 681.295 61.3587Z"
+                    fill="url(#paint0_radial_1012_9101)"
+                  />
+                  <defs>
+                    <radialGradient
+                      id="paint0_radial_1012_9101"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(166.184 -297.199) rotate(69.411) scale(732.957 1343.33)"
+                    >
+                      <stop
+                        offset="0.490969"
+                        stop-color="white"
+                        stop-opacity="0"
+                      />
+                      <stop offset="0.745829" stop-color="white" />
+                      <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="ellipse13">
+                <svg
+                  width="691"
+                  height="81"
+                  viewBox="0 0 691 81"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M681.295 19.3587C724.756 -81.9075 609.533 -228.572 423.937 -308.225C238.341 -387.878 52.6542 -370.357 9.19326 -269.091C-34.2676 -167.824 88.9036 -157.436 274.499 -77.7826C257.501 100.717 637.834 120.625 681.295 19.3587Z"
+                    fill="url(#paint0_radial_1012_9102)"
+                  />
+                  <defs>
+                    <radialGradient
+                      id="paint0_radial_1012_9102"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(166.184 377.916) rotate(-69.411) scale(732.957 1343.33)"
+                    >
+                      <stop
+                        offset="0.490969"
+                        stop-color="white"
+                        stop-opacity="0"
+                      />
+                      <stop offset="0.745829" stop-color="white" />
+                      <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="side-banner__content">
+                <h2 class="side-banner__title">Какая виза вам нужна?</h2>
+                <div class="side-banner__desc">
+                  Заполните форму, чтобы наш менеджер мог связаться с вами
+                </div>
+                <a href="#" class="btn btn--accent btn--block"
+                  >Оставить заявку</a
+                >
+              </div>
+              <div class="side-banner__media">
+                <img
+                  src="/assets/images/content/passports.png"
+                  alt=""
+                  class="side-banner__image"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="container">
+          <div class="site-footer__grid">
+            <!-- Col 1 -->
+            <div class="site-footer__col site-footer__col--brand">
+              <a href="/" class="logo logo--footer">
+                <img
+                  src="/assets/images/logos/logo-footer.png"
+                  alt="Логотип Манго ДВ"
+                />
+              </a>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="site-footer__col">
+              <h4 class="site-footer__title">Туры по направлениям</h4>
+              <ul class="site-footer__list">
+                <li><a href="/tury/goryashchie/">Горящие туры</a></li>
+                <li><a href="/tury/po-stranam/">По странам</a></li>
+                <li>
+                  <a href="/tury/po-kitayu/">По Китаю</a>
+                </li>
+                <li><a href="/tury/po-rossii/">По России</a></li>
+                <li><a href="/tury/po-dv/">По ДВ</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="site-footer__col">
+              <h4 class="site-footer__title">Услуги и бонусы</h4>
+              <ul class="site-footer__list">
+                <li><a href="/uslugi/vizy/">Визы</a></li>
+                <li><a href="/uslugi/aviabilety/">Авиабилеты</a></li>
+                <li>
+                  <a href="/uslugi/premium/">Премиум-сервис в путешествии</a>
+                </li>
+                <li>
+                  <a href="/uslugi/podderzhka/">Поддержка туристов</a>
+                </li>
+                <li>
+                  <a href="/uslugi/programma-loyalnosti/"
+                    >Программа лояльности</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="site-footer__col">
+              <h4 class="site-footer__title">Контакты</h4>
+              <ul class="site-footer__list">
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      width="10"
+                      height="12"
+                      viewBox="0 0 10 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 0C6.33358 0 7.61268 0.523001 8.55566 1.4541C12.0097 4.86465 8.59219 9.58524 5.37305 11.8809C5.14971 12.0399 4.85028 12.0399 4.62695 11.8809C1.40782 9.58525 -2.00968 4.86465 1.44434 1.4541C2.38731 0.52301 3.66643 9.84971e-06 5 0ZM5 3.33301C4.26379 3.3332 3.66699 3.93073 3.66699 4.66699C3.66721 5.40306 4.26392 5.9998 5 6C5.73624 6 6.33376 5.40319 6.33398 4.66699C6.33398 3.93061 5.73638 3.33301 5 3.33301Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">
+                    г. Хабаровск, ул. Дикопольцева, 10, оф. 4
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.39997 7.68098C6.80332 9.36142 2.73054 5.32522 4.3333 3.63836C5.31188 2.60842 4.20642 1.43138 3.59453 0.566226C2.44616 -1.05748 -0.074858 1.18427 0.00170545 2.61029C0.243152 7.10723 5.10769 12.4364 9.81835 11.9716C11.292 11.8262 12.9852 9.16477 11.2949 8.19213C10.4496 7.70577 9.28947 6.74479 8.39997 7.68098Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">+7 (800) 600–84–64</div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 14 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.571289 4.2C0.571289 3.0799 0.571289 2.51984 0.789276 2.09202C0.981023 1.71569 1.28698 1.40973 1.66331 1.21799C2.09113 1 2.65118 1 3.77129 1H10.2284C11.3485 1 11.9086 1 12.3364 1.21799C12.7127 1.40973 13.0187 1.71569 13.2104 2.09202C13.4284 2.51984 13.4284 3.0799 13.4284 4.2V7.8C13.4284 8.9201 13.4284 9.48016 13.2104 9.90798C13.0187 10.2843 12.7127 10.5903 12.3364 10.782C11.9086 11 11.3485 11 10.2284 11H3.77129C2.65118 11 2.09113 11 1.66331 10.782C1.28698 10.5903 0.981023 10.2843 0.789276 9.90798C0.571289 9.48016 0.571289 8.92011 0.571289 7.8V4.2Z"
+                        fill="#595959"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.571289 3.14286L5.22482 6.24521C5.86633 6.67289 6.18709 6.88673 6.53378 6.96981C6.84016 7.04323 7.15956 7.04323 7.46594 6.96981C7.81263 6.88673 8.13339 6.67289 8.7749 6.24521L13.4284 3.14286"
+                        fill="#595959"
+                      />
+                      <path
+                        d="M0.571289 3.14286L5.22482 6.24521C5.86633 6.67289 6.18709 6.88673 6.53378 6.96981C6.84016 7.04323 7.15956 7.04323 7.46594 6.96981C7.81263 6.88673 8.13339 6.67289 8.7749 6.24521L13.4284 3.14286M3.77129 11H10.2284C11.3485 11 11.9086 11 12.3364 10.782C12.7127 10.5903 13.0187 10.2843 13.2104 9.90798C13.4284 9.48016 13.4284 8.92011 13.4284 7.8V4.2C13.4284 3.0799 13.4284 2.51984 13.2104 2.09202C13.0187 1.71569 12.7127 1.40973 12.3364 1.21799C11.9086 1 11.3485 1 10.2284 1H3.77129C2.65118 1 2.09113 1 1.66331 1.21799C1.28698 1.40973 0.981023 1.71569 0.789276 2.09202C0.571289 2.51984 0.571289 3.07989 0.571289 4.2V7.8C0.571289 8.92011 0.571289 9.48016 0.789276 9.90798C0.981023 10.2843 1.28698 10.5903 1.66331 10.782C2.09113 11 2.65118 11 3.77129 11Z"
+                        stroke="#F5F4FA"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">mango-dv@mail.ru</div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 5 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">Юридическая информация</h4>
+              <p class="site-footer__text">
+                Номер лицензии в реестре турагенств: КМ100193
+              </p>
+              <p class="site-footer__text">
+                Номер в едином Федеральном Реестре Туроператоров: РТО 022489
+              </p>
+            </div>
+
+            <!-- Col 6 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">Виды отдыха</h4>
+              <ul class="site-footer__list">
+                <li><a href="/vidy-otdykha/plyazhnye/">Пляжный отдых</a></li>
+                <li>
+                  <a href="/vidy-otdykha/ekskursii-odnogo-dnya/"
+                    >Экскурсии одного для</a
+                  >
+                </li>
+                <li>
+                  <a href="/vidy-otdykha/shkolnye-tury-i-lagerya/"
+                    >Школьные туры и детские лагеря</a
+                  >
+                </li>
+                <li><a href="/vidy-otdykha/vip">ВИП-туры</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 7 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">О нас</h4>
+              <ul class="site-footer__list">
+                <li><a href="/o-nas/o-kompanii/">О компании</a></li>
+                <li><a href="/o-nas/otzyvy/">Отзывы</a></li>
+                <li><a href="/o-nas/komanda">Команда</a></li>
+                <li><a href="/o-nas/komanda/">Контакты</a></li>
+                <li><a href="/novosti/">Новости</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 8 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">Мы в соцсетях</h4>
+              <ul class="site-footer__list">
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.02621 12.4335C6.03954 12.4335 5.07288 12.1669 4.22621 11.6669L4.02621 11.5469L1.94621 12.0935L2.49954 10.0669L2.36621 9.8602C1.81791 8.9849 1.52683 7.97305 1.52621 6.9402C1.52621 3.91353 3.99288 1.44687 7.01954 1.44687C8.48621 1.44687 9.86621 2.0202 10.8995 3.0602C11.4113 3.56944 11.8168 4.17523 12.0926 4.84242C12.3684 5.50961 12.509 6.22492 12.5062 6.94687C12.5195 9.97353 10.0529 12.4335 7.02621 12.4335ZM8.91288 7.78687C9.05954 7.84687 9.87288 8.24687 10.0395 8.32687C10.2062 8.40687 10.3062 8.4402 10.3529 8.51353C10.3995 8.58687 10.3995 8.91353 10.2595 9.3002C10.1262 9.68687 9.46621 10.0402 9.14621 10.0869C8.85954 10.1269 8.49954 10.1469 8.10621 10.0202C7.86621 9.94687 7.55954 9.84687 7.16621 9.67353C5.51288 8.9602 4.42621 7.29353 4.34621 7.1802L4.34491 7.17847C4.26002 7.0653 3.67288 6.28261 3.67288 5.47353C3.67288 4.6602 4.09954 4.2602 4.24621 4.09353C4.39954 3.92687 4.57288 3.88687 4.68621 3.88687H5.00621C5.10621 3.89353 5.24621 3.85353 5.37954 4.17353C5.51288 4.50687 5.84621 5.3202 5.88621 5.4002C5.92621 5.4802 5.95288 5.57353 5.89954 5.68687C5.84621 5.79353 5.81288 5.86687 5.73288 5.9602C5.65288 6.05353 5.55954 6.17353 5.48621 6.24687C5.39954 6.33353 5.31954 6.4202 5.41288 6.58687C5.51288 6.75353 5.83954 7.29353 6.33288 7.73353C6.95954 8.29353 7.49288 8.47353 7.65954 8.55353C7.82621 8.6402 7.92621 8.62687 8.01954 8.51353C8.11288 8.40687 8.42621 8.03353 8.53954 7.86687C8.65288 7.70687 8.75954 7.73353 8.91288 7.78687Z"
+                        fill="#595959"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.55788 0.833774C10.3602 1.16684 11.0883 1.65627 11.6995 2.27353C12.9462 3.5202 13.6329 5.1802 13.6329 6.94687C13.6329 10.5869 10.6662 13.5535 7.02621 13.5535C5.91954 13.5535 4.83288 13.2735 3.86621 12.7469L0.366211 13.6669L1.29954 10.2402C0.726211 9.2402 0.419544 8.10687 0.419544 6.9402C0.419544 3.3002 3.38621 0.333532 7.02621 0.333532C7.89493 0.330654 8.75554 0.500704 9.55788 0.833774ZM4.22621 11.6669C5.07288 12.1669 6.03954 12.4335 7.02621 12.4335C10.0529 12.4335 12.5195 9.97353 12.5062 6.94687C12.509 6.22492 12.3684 5.50961 12.0926 4.84242C11.8168 4.17523 11.4113 3.56944 10.8995 3.0602C9.86621 2.0202 8.48621 1.44687 7.01954 1.44687C3.99288 1.44687 1.52621 3.91353 1.52621 6.9402C1.52683 7.97305 1.81791 8.9849 2.36621 9.8602L2.49954 10.0669L1.94621 12.0935L4.02621 11.5469L4.22621 11.6669Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">WhatsApp</div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.99967 0.333496C3.31967 0.333496 0.333008 3.32016 0.333008 7.00016C0.333008 10.6802 3.31967 13.6668 6.99967 13.6668C10.6797 13.6668 13.6663 10.6802 13.6663 7.00016C13.6663 3.32016 10.6797 0.333496 6.99967 0.333496ZM10.093 4.86683C9.99301 5.92016 9.55967 8.48016 9.33967 9.66016C9.24634 10.1602 9.05967 10.3268 8.88634 10.3468C8.49967 10.3802 8.20634 10.0935 7.83301 9.84683C7.24634 9.46016 6.91301 9.22016 6.34634 8.84683C5.68634 8.4135 6.11301 8.1735 6.49301 7.78683C6.59301 7.68683 8.29967 6.1335 8.33301 5.9935C8.33764 5.97229 8.33702 5.95028 8.33121 5.92936C8.3254 5.90845 8.31458 5.88927 8.29967 5.8735C8.25967 5.84016 8.20634 5.8535 8.15967 5.86016C8.09967 5.8735 7.16634 6.4935 5.34634 7.72016C5.07967 7.90016 4.83967 7.9935 4.62634 7.98683C4.38634 7.98016 3.93301 7.8535 3.59301 7.74016C3.17301 7.60683 2.84634 7.5335 2.87301 7.30016C2.88634 7.18016 3.05301 7.06016 3.36634 6.9335C5.31301 6.08683 6.60634 5.52683 7.25301 5.26016C9.10634 4.48683 9.48634 4.3535 9.73967 4.3535C9.79301 4.3535 9.91967 4.36683 9.99967 4.4335C10.0663 4.48683 10.0863 4.56016 10.093 4.6135C10.0863 4.6535 10.0997 4.7735 10.093 4.86683Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">Telegram</div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 13 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.91 0.91C1.72191e-07 1.82867 0 3.29767 0 6.24V6.76C0 9.698 1.72191e-07 11.167 0.91 12.09C1.82867 13 3.29767 13 6.24 13H6.76C9.698 13 11.167 13 12.09 12.09C13 11.1713 13 9.70233 13 6.76V6.24C13 3.302 13 1.833 12.09 0.91C11.1713 1.72191e-07 9.70233 0 6.76 0H6.24C3.302 0 1.833 1.72191e-07 0.91 0.91ZM2.19267 3.95633H3.68333C3.731 6.435 4.823 7.48367 5.68967 7.70033V3.95633H7.08933V6.09267C7.943 6.00167 8.84433 5.02667 9.14767 3.952H10.543C10.4291 4.50827 10.2018 5.03509 9.87528 5.49959C9.54872 5.96408 9.12991 6.35627 8.645 6.65167C9.18626 6.92096 9.66425 7.30198 10.0474 7.76957C10.4306 8.23717 10.7103 8.78071 10.868 9.36433H9.32967C9.00033 8.33733 8.177 7.54 7.08933 7.43167V9.36433H6.916C3.952 9.36433 2.262 7.33633 2.19267 3.95633Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">Вконтакте</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="site-footer__legal">
+              <div class="site-footer__legal-links">
+                <a class="site-footer__copyright"
+                  >© Mango DV 2025. Все права защищены</a
+                >
+                <a href="/politikia-konfidentsialnosti/"
+                  >Политика конфиденциальности</a
+                >
+                <a href="/polzovatelskoe-soglashenie/"
+                  >Пользовательское соглашение</a
+                >
+                <a href="#"
+                  >Разработано в
+                  <span class="site-footer__dev"
+                    ><img
+                      src="/assets/images/logos/dark-studio-logo.png"
+                      alt="Логотип DarkStudio" /></span
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

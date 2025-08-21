@@ -1,0 +1,133 @@
+// .article-card {
+//   max-width: 325px;
+//   width: 100%;
+//   margin-inline: auto;
+//   display: flex;
+//   flex-direction: column;
+//   cursor: pointer;
+
+//   &__image-wrapper {
+//     aspect-ratio: 1 / 1;
+//     border-radius: var(--radius-md, 16px);
+//     overflow: hidden;
+//   }
+
+//   &__image {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     display: block;
+
+//     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+//     transform-origin: center;
+//     will-change: transform;
+//   }
+
+//   &__body {
+//     margin-top: 16px;
+//   }
+
+//   &__title {
+//     font-size: 1rem;
+//     line-height: 1.4;
+//     letter-spacing: -0.04em;
+//     color: var(--color-text-primary, #2b2b2b);
+//     font-weight: 500;
+//     margin-top: 8px;
+//     transition: color 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+//   }
+
+//   /* hover эффекты по всей карточке */
+//   @media (hover: hover) {
+//     &:hover &__image {
+//       transform: scale(1.05);
+//     }
+//     &:hover &__title {
+//       color: #ee8a2c;
+//     }
+//   }
+
+//   @media (prefers-reduced-motion: reduce) {
+//     &__image,
+//     &__title {
+//       transition: none;
+//     }
+//   }
+// }
+
+/* =========================================
+   Article Card
+   - Clickable card via <a class="article-card__link">
+   - Keeps existing hover effects for image & title
+   ========================================= */
+
+.article-card {
+  max-width: 325px;
+  width: 100%;
+  margin-inline: auto;
+
+  /* ссылка-обёртка делает кликабельной всю карточку */
+  &__link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border-radius: var(--radius-md, 16px); /* для красивого focus-outline */
+    outline: none; /* убираем стандартный, оставляем кастомный ниже */
+  }
+
+  &__image-wrapper {
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-md, 16px);
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  &__body {
+    margin-top: 16px;
+  }
+
+  &__title {
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: -0.04em;
+    color: var(--color-text-primary, #2b2b2b);
+    font-weight: 500;
+    margin-top: 8px;
+    transition: color 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  /* hover эффекты по всей карточке (через ссылку) */
+  @media (hover: hover) {
+    &__link:hover .article-card__image {
+      transform: scale(1.05);
+    }
+    &__link:hover .article-card__title {
+      color: #ee8a2c;
+    }
+  }
+
+  /* доступность: кастомный фокус на всей карточке */
+  &__link:focus-visible {
+    outline: 2px solid var(--color-accent, #ee8a2c);
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__image,
+    &__title {
+      transition: none;
+    }
+  }
+}

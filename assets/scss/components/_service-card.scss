@@ -1,0 +1,208 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+
+.service-card {
+  width: 328px; // Mobile default
+  height: 435px;
+  background-color: var(--color-bg-secondary, #f5f4fa);
+  border-radius: 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+
+  // Tablet and up: narrower card (matches Figma grid)
+  @include media.respond-min($bp-sm) {
+    width: 256px;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 231px; /* из макета */
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+  }
+
+  &__content {
+    padding: 16px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &__image {
+    position: absolute;
+    object-fit: contain;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-text-primary, #2b2b2b);
+  }
+
+  &__desc {
+    font-size: 1rem;
+    color: var(--color-text-muted, #96989c);
+  }
+
+  /* ===== Card 1 ===== */
+  &--1 {
+    .service-card__bg {
+      width: 335.5648px;
+      height: 185.0558px;
+      top: -25px;
+      left: -146px;
+      transform: rotate(25.18deg);
+      background: linear-gradient(
+        198.48deg,
+        rgba(190, 118, 255, 0.6) 0.63%,
+        #e9e6f4 46.52%
+      );
+      opacity: 0.2;
+      border-radius: 16px;
+    }
+
+    .service-card__image {
+      width: 264.6599px;
+      height: 209.5452px;
+      top: 66.94px;
+      left: -6.55px;
+      transform: rotate(-1.82deg);
+      filter: drop-shadow(6px 6px 10.1px rgba(55, 75, 141, 0.26));
+      background: none;
+    }
+  }
+
+  /* ===== Card 2 ===== */
+  &--2 {
+    .service-card__bg {
+      width: 219px;
+      height: 152.7708px;
+      top: 57px;
+      left: 0;
+      transform: scaleX(-1) rotate(-120deg);
+      background: linear-gradient(158.7deg, #efb4da 8.21%, #feeaf7 132.55%);
+      opacity: 0.2;
+      border-radius: 16px;
+    }
+
+    .service-card__image {
+      width: 303px;
+      height: 333px;
+      top: -24px;
+      left: 7px;
+      transform: rotate(70deg);
+      filter: drop-shadow(6px 6px 10.1px rgba(49, 50, 51, 0.22));
+    }
+  }
+
+  /* ===== Card 3 ===== */
+  &--3 {
+    .service-card__bg {
+      width: 207px;
+      height: 308px;
+      top: 12px;
+      left: 25px;
+      background: linear-gradient(
+        198.48deg,
+        rgba(190, 118, 255, 0.6) 0.63%,
+        #e9e6f4 46.52%
+      );
+      opacity: 0.2;
+      border-radius: 16px;
+    }
+
+    .service-card__image {
+      width: 410px; /* увеличено */
+      height: auto;
+      max-width: none;
+      max-height: none;
+      object-fit: unset;
+      top: 50px;
+      left: -140px;
+      transform: none;
+      filter: drop-shadow(6px 6px 10.1px rgba(141, 101, 53, 0.21));
+    }
+  }
+
+  /* ===== Card 4 ===== */
+  &--4 {
+    .service-card__bg {
+      width: 226px;
+      height: 130px;
+      top: 32px;
+      left: 21px;
+      background: linear-gradient(
+        168.5deg,
+        rgba(245, 96, 193, 0.6) -4.52%,
+        #feeaf7 50.69%
+      );
+      opacity: 0.2;
+      border-radius: 16px;
+    }
+
+    .service-card__image {
+      width: 315px;
+      height: auto;
+      max-width: none;
+      top: 40px;
+      left: -28.66px;
+      transform: none;
+      filter: drop-shadow(6px 6px 10.1px rgba(49, 50, 51, 0.22));
+    }
+  }
+
+  /* ===== Card 5 ===== */
+  &--5 {
+    .service-card__bg {
+      width: 400px;
+      height: 400px;
+      max-width: none;
+      max-height: none;
+      object-fit: unset;
+      top: 21px;
+      left: 39px;
+      background: linear-gradient(
+        198.48deg,
+        rgba(190, 118, 255, 0.6) 0.63%,
+        #e9e6f4 46.52%
+      );
+      opacity: 0.2;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .service-card__image--phone {
+      width: 385px;
+      height: 385px;
+      max-width: none;
+      max-height: none;
+      top: 0;
+      left: -54px;
+      transform: rotate(0deg);
+      filter: drop-shadow(5.66px 5.66px 9.53px rgba(49, 50, 51, 0.22));
+      z-index: 1;
+    }
+
+    .service-card__image--logo {
+      width: 161.7759px;
+      height: 72.0638px;
+      top: 132px;
+      left: -21px;
+      transform: rotate(-51deg);
+      z-index: 2;
+      filter: none;
+    }
+  }
+}

@@ -1,0 +1,259 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+@use "../components/stars" as stars;
+
+// --------- BASE (Mobile-First) ---------
+.search-panel {
+  //margin-top: clamp(48px, 8vw, 117px);
+  padding: 12px;
+  border-radius: var(--radius-lg, 20px);
+  background-color: var(--color-bg-secondary, #f5f4fa);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__row,
+  &__row--secondary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  &__row-primary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    > .search-field {
+      height: 56px;
+      border-radius: var(--radius-sm, 12px);
+    }
+
+    // 1-й — на всю ширину
+    > .search-field:nth-child(1) {
+      flex: 1 1 100%;
+    }
+
+    // 2-й ряд — 2 и 3 (50/50)
+    > .search-field:nth-child(2),
+    > .search-field:nth-child(3) {
+      flex: 1 1 calc(50% - 2px);
+    }
+
+    // 3-й ряд — 4 и 5 (50/50)
+    > .search-field:nth-child(4),
+    > .search-field:nth-child(5) {
+      flex: 1 1 calc(50% - 2px);
+    }
+
+    // 4-й ряд — кнопка на всю ширину
+    > .search-field__btn-wrapper {
+      flex: 1 1 100%;
+      width: 100%;
+      height: 56px;
+
+      .search-field__btn {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius-md, 16px);
+      }
+    }
+  }
+
+  // Скрыть вторую строку на мобилке
+  &__row--secondary {
+    display: none;
+  }
+}
+
+// --------- SEARCH-FIELD (Mobile-First) ---------
+.search-field {
+  flex: 1 1 clamp(150px, 25%, 300px);
+  background-color: #fff;
+  border: 1px solid var(--color-border, #eff0f3);
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  border-radius: var(--radius-sm, 12px);
+  padding: clamp(6px, 1vw, 7px) clamp(10px, 2vw, 16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(8px, 1.5vw, 16px);
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__label {
+    font-size: clamp(0.625rem, 0.8vw, 0.75rem);
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-muted-alt, #9a9a9a);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-text-muted-alt, #9a9a9a);
+
+    svg {
+      width: clamp(11px, 1vw, 14px);
+      height: clamp(10px, 1vw, 13px);
+      gap: clamp(4px, 1vw, 2px);
+    }
+  }
+
+  &__value {
+    font-size: 1.125rem;
+    // font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-text-primary, #2b2b2b);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &.stars {
+      @include stars.stars;
+      --star-size: clamp(12px, 0.9vw, 14px);
+      --star-gap: clamp(2px, 0.5vw, 4px);
+    }
+  }
+
+  &__btn-wrapper {
+    width: 80px;
+    height: 56px;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-md, 16px);
+    background-color: var(--color-accent, #ee8a2c);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: var(--color-accent-hover, #e77913);
+    }
+  }
+}
+
+// --------- BUTTON ICON/TEXT VISIBILITY (simple selectors, always win) ---------
+.search-field__btn .btn__icon {
+  display: none;
+}
+
+.search-field__btn .btn__text {
+  display: inline;
+}
+
+// --------- EXTRA-SMALL SCREEN TWEAKS ---------
+@include media.respond-max($bp-sm) {
+  .search-field {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+// --------- DESKTOP / TABLET (min-width: $bp-md) ---------
+@include media.respond-min($bp-md) {
+  .search-panel {
+    gap: clamp(4px, 1vw, 12px);
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__row,
+    &__row--secondary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(4px, 1vw, 8px);
+    }
+
+    &__row-primary {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        150px
+        150px
+        200px
+        80px;
+      grid-auto-rows: 56px;
+      gap: 0;
+      align-items: stretch;
+
+      > .search-field,
+      > .search-field__btn-wrapper {
+        height: 56px;
+        min-width: 0;
+        border-radius: 0;
+        overflow: hidden;
+      }
+
+      > .search-field:first-child {
+        border-top-left-radius: var(--radius-md, 16px);
+        border-bottom-left-radius: var(--radius-md, 16px);
+      }
+
+      > .search-field__btn-wrapper .search-field__btn {
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: var(--radius-md, 16px);
+        border-bottom-right-radius: var(--radius-md, 16px);
+      }
+    }
+
+    &__row--secondary {
+      .search-field {
+        height: 40px;
+        border-radius: var(--radius-sm, 12px);
+        flex: 0 0 calc((100% - 4 * clamp(4px, 1vw, 8px)) / 5);
+        min-width: 0;
+        margin-top: 8px;
+        box-sizing: border-box;
+      }
+
+      display: flex; // Show secondary row
+    }
+  }
+
+  // --------- BUTTON ICON/TEXT DESKTOP OVERRIDE (simple selector) ---------
+  .search-field__btn .btn__icon {
+    display: inline;
+  }
+  .search-field__btn .btn__text {
+    display: none;
+  }
+}

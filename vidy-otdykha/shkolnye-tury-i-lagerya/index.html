@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Школьные туры и детские лагеря — Манго ДВ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/scss/compiled-style.css" />
+
+    <script src="/assets/js/filter-chips-toggle.js" defer></script>
+    <script src="/assets/js/main-nav-submenu.js" defer></script>
+    <script src="/assets/js/form-move.js" defer></script>
+    <script src="/assets/js/swiper-bundle.min.js" defer></script>
+    <script src="/assets/js/swiper-init.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <header class="site-header mb-32 mt-16" role="banner">
+          <div class="site-header__container">
+            <a class="site-header__logo" href="/">
+              <img src="/assets/images/logos/logo.png" alt="Логотип Манго ДВ" />
+            </a>
+
+            <!-- Кнопка бургер -->
+            <button
+              type="button"
+              class="site-header__burger"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="main-menu"
+            ></button>
+
+            <nav class="main-nav" role="navigation" aria-label="Основное меню">
+              <ul class="main-nav__menu" id="main-menu">
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    Туры по направлениям
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/goryashchie/"
+                          >Горящие туры</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-stranam/"
+                          >По странам</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-kitayu/"
+                          >По Китаю</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-rossii/"
+                          >По России</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/tury/po-dv/"
+                          >По ДВ</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    Виды отдыха
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/vidy-otdykha/plyazhnye/"
+                          >Пляжный отдых</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/vidy-otdykha/ekskursii-odnogo-dnya/"
+                          >Экскурсии одного дня</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/vidy-otdykha/shkolnye-tury-i-lagerya/"
+                          >Школьные и детские туры</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/vidy-otdykha/vip/"
+                          >ВИП-туры</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    Услуги и бонусы
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/vizy/"
+                          >Визы</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/aviabilety/"
+                          >Авиабилеты</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/premium/"
+                          >Премиум-сервис в путеествии</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/uslugi/podderzhka/"
+                          >Поддержка туристов</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="nav-submenu__link"
+                          href="/uslugi/programma-loyalnosti/"
+                          >Программа лояльности</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item has-submenu">
+                  <button
+                    class="main-nav__disclosure"
+                    type="button"
+                    aria-expanded="false"
+                  >
+                    О нас
+                  </button>
+                  <div class="nav-submenu" hidden>
+                    <ul class="nav-submenu__list">
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/o-kompanii/"
+                          >О компании</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/otzyvy/"
+                          >Отзывы</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/komanda/"
+                          >Команда</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/o-nas/kontakty/"
+                          >Контакты</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-submenu__link" href="/novosti/"
+                          >Новости</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="/agenstvam/">Агенствам</a>
+                </li>
+              </ul>
+            </nav>
+
+            <button type="button" class="site-header__contact">
+              +7 (800) 600 84 64
+            </button>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <!-- breadcrumbs -->
+    <div class="wrapper">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="breadcrumbs">
+          <svg
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M7 1L1 7L7 13"
+              stroke="#96989C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <a class="breadcrumbs__link" href="/" rel="home"
+            >Вернуться на Главную</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="container">
+        <form class="search-panel mb-fluid-32-40">
+          <div class="search-panel__inner">
+            <!-- Первый ряд -->
+            <div class="search-panel__row search-panel__row-primary">
+              <div class="search-field">
+                <div class="search-field__data">
+                  <div class="search-field__label">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      class="icon"
+                    >
+                      <path
+                        d="M7.18544 3.21763L9.07235 1.33072C9.51332 0.889759 10.2283 0.889759 10.6693 1.33072C11.1102 1.77168 11.1102 2.48668 10.6693 2.92765L8.78237 4.81456L9.8033 9.89474C9.93419 10.5452 8.67347 11.4503 8.33799 10.5898L6.84304 6.75388L4.90258 8.69435C4.9977 9.82845 5.01782 10.2051 4.2229 11L3.01453 8.98547L1 7.7771C1.79492 6.98218 2.17154 7.0023 3.30565 7.09742L5.24612 5.15696L1.41077 3.66201C0.549739 3.32681 1.45449 2.06575 2.10526 2.1967L7.18544 3.21763Z"
+                        stroke="#96989C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    ГОРОД ВЫЛЕТА
+                  </div>
+                  <div class="search-field__value">Хабаровск</div>
+                </div>
+              </div>
+              <div class="search-field">
+                <div class="search-field__data">
+                  <div class="search-field__label">
+                    <svg
+                      width="11"
+                      height="13"
+                      viewBox="0 0 11 13"
+                      fill="none"
+                      class="icon"
+                    >
+                      <path
+                        d="M5.72848 11.8904C5.53182 12.0365 5.26818 12.0365 5.07152 11.8904C2.23868 9.78611 -0.768464 5.45934 2.27113 2.333C3.10096 1.4795 4.22645 1 5.4 1C6.57355 1 7.69904 1.4795 8.52887 2.333C11.5685 5.45934 8.56133 9.78611 5.72848 11.8904Z"
+                        stroke="#96989C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.4 6.5C6.04801 6.5 6.57333 5.95279 6.57333 5.27778C6.57333 4.60276 6.04801 4.05556 5.4 4.05556C4.75199 4.05556 4.22667 4.60276 4.22667 5.27778C4.22667 5.95279 4.75199 6.5 5.4 6.5Z"
+                        stroke="#96989C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    СТРАНА
+                  </div>
+                  <div class="search-field__value">Таиланд</div>
+                </div>
+              </div>
+              <div class="search-field">
+                <div class="search-field__data">
+                  <div class="search-field__label">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      class="icon"
+                    >
+                      <path
+                        d="M8.5 2.11111V1M3.5 2.11111V1M1.13889 3.77778H10.8611M4.55556 11H7.44444C8.68901 11 9.31129 11 9.78665 10.7712C10.2048 10.57 10.5447 10.249 10.7578 9.85405C11 9.4051 11 8.81739 11 7.64198V4.91358C11 3.73816 11 3.15045 10.7578 2.7015C10.5447 2.30659 10.2048 1.98552 9.78665 1.78431C9.31129 1.55556 8.68901 1.55556 7.44444 1.55556H4.55556C3.31099 1.55556 2.68871 1.55556 2.21335 1.78431C1.79522 1.98552 1.45526 2.30659 1.24221 2.7015C1 3.15045 1 3.73816 1 4.91358V7.64198C1 8.81739 1 9.4051 1.24221 9.85405C1.45526 10.249 1.79522 10.57 2.21335 10.7712C2.68871 11 3.31099 11 4.55556 11Z"
+                        stroke="#96989C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    ДАТА ВЫЛЕТА
+                  </div>
+                  <div class="search-field__value">27 - 5 июня</div>
+                </div>
+              </div>
+              <div class="search-field">
+                <div class="search-field__data">
+                  <div class="search-field__label">
+                    ️
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon"
+                    >
+                      <path
+                        d="M6 2.66667V6H3.5M11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z"
+                        stroke="#96989C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    НОЧЕЙ
+                  </div>
+                  <div class="search-field__value">6 - 14 ночей</div>
+                </div>
+              </div>
+              <div class="search-field">
+                <div class="search-field__data">
+                  <div class="search-field__label">
+                    <svg
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.3 4.875C7.3 5.91053 6.49411 6.75 5.5 6.75C4.50589 6.75 3.7 5.91053 3.7 4.875C3.7 3.83947 4.50589 3 5.5 3C6.49411 3 7.3 3.83947 7.3 4.875Z"
+                        stroke="#96989C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    ТУРИСТЫ
+                  </div>
+                  <div class="search-field__value">2 взрослых</div>
+                </div>
+              </div>
+              <div class="search-field__btn-wrapper">
+                <button class="search-field__btn">
+                  <svg
+                    class="btn__icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.4259 15.4278L23 22M18.7837 9.3753C18.7837 14.0009 15.0265 17.7506 10.3918 17.7506C5.75716 17.7506 2 14.0009 2 9.3753C2 4.74975 5.75716 1 10.3918 1C15.0265 1 18.7837 4.74975 18.7837 9.3753Z"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="btn__text">Найти туры</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Второй ряд полей -->
+            <div class="search-panel__row search-panel__row--secondary">
+              <!-- Класс отеля + звезды -->
+              <div class="search-field">
+                <div class="search-field__title">
+                  <span class="search-field__label">Класс отеля</span>
+                  <div class="search-field__value stars">
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
+                      <path
+                        d="M7.43475 0.62391C7.18046 0.162391 6.50812 0.162391 6.25384 0.62391C6.11532 0.875326 5.98241 1.13011 5.8553 1.38811C5.455 2.20054 5.11207 3.04481 4.8316 3.91596C4.73566 4.21394 4.45059 4.42091 4.12433 4.42957C3.35439 4.45001 2.58585 4.51336 1.82374 4.62092C1.60609 4.65164 1.38959 4.68583 1.17431 4.72345C0.639016 4.81697 0.438157 5.42729 0.818277 5.79924C0.904986 5.88408 0.99243 5.96822 1.0806 6.05163C1.73992 6.67541 2.43978 7.25898 3.17597 7.79826C3.42989 7.98426 3.53427 8.30335 3.43722 8.5946C3.13318 9.50709 2.89787 10.4497 2.73724 11.4166C2.70502 11.6106 2.67581 11.8055 2.64965 12.0013C2.57995 12.523 3.13895 12.8914 3.62415 12.6427C3.79735 12.554 3.96901 12.4627 4.13909 12.3691C4.91945 11.9396 5.66656 11.4595 6.37572 10.9335C6.65097 10.7293 7.03762 10.7293 7.31286 10.9335C8.02202 11.4595 8.76913 11.9396 9.54949 12.3691C9.71957 12.4627 9.89124 12.554 10.0644 12.6427C10.5496 12.8914 11.1086 12.523 11.0389 12.0013C11.0128 11.8055 10.9836 11.6106 10.9514 11.4166C10.7907 10.4497 10.5554 9.50709 10.2514 8.5946C10.1543 8.30335 10.2587 7.98426 10.5126 7.79826C11.2488 7.25898 11.9487 6.67541 12.608 6.05163C12.6962 5.96822 12.7836 5.88408 12.8703 5.79924C13.2504 5.42729 13.0496 4.81697 12.5143 4.72345C12.299 4.68583 12.0825 4.65164 11.8648 4.62092C11.1027 4.51336 10.3342 4.45001 9.56426 4.42957C9.23799 4.42091 8.95292 4.21394 8.85698 3.91596C8.57651 3.04481 8.23358 2.20054 7.83329 1.38811C7.70617 1.13011 7.57327 0.875326 7.43475 0.62391Z"
+                        fill="#C0BDC8"
+                      />
+                    </svg>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
+                      <path
+                        d="M7.43475 0.62391C7.18046 0.162391 6.50812 0.162391 6.25384 0.62391C6.11532 0.875326 5.98241 1.13011 5.8553 1.38811C5.455 2.20054 5.11207 3.04481 4.8316 3.91596C4.73566 4.21394 4.45059 4.42091 4.12433 4.42957C3.35439 4.45001 2.58585 4.51336 1.82374 4.62092C1.60609 4.65164 1.38959 4.68583 1.17431 4.72345C0.639016 4.81697 0.438157 5.42729 0.818277 5.79924C0.904986 5.88408 0.99243 5.96822 1.0806 6.05163C1.73992 6.67541 2.43978 7.25898 3.17597 7.79826C3.42989 7.98426 3.53427 8.30335 3.43722 8.5946C3.13318 9.50709 2.89787 10.4497 2.73724 11.4166C2.70502 11.6106 2.67581 11.8055 2.64965 12.0013C2.57995 12.523 3.13895 12.8914 3.62415 12.6427C3.79735 12.554 3.96901 12.4627 4.13909 12.3691C4.91945 11.9396 5.66656 11.4595 6.37572 10.9335C6.65097 10.7293 7.03762 10.7293 7.31286 10.9335C8.02202 11.4595 8.76913 11.9396 9.54949 12.3691C9.71957 12.4627 9.89124 12.554 10.0644 12.6427C10.5496 12.8914 11.1086 12.523 11.0389 12.0013C11.0128 11.8055 10.9836 11.6106 10.9514 11.4166C10.7907 10.4497 10.5554 9.50709 10.2514 8.5946C10.1543 8.30335 10.2587 7.98426 10.5126 7.79826C11.2488 7.25898 11.9487 6.67541 12.608 6.05163C12.6962 5.96822 12.7836 5.88408 12.8703 5.79924C13.2504 5.42729 13.0496 4.81697 12.5143 4.72345C12.299 4.68583 12.0825 4.65164 11.8648 4.62092C11.1027 4.51336 10.3342 4.45001 9.56426 4.42957C9.23799 4.42091 8.95292 4.21394 8.85698 3.91596C8.57651 3.04481 8.23358 2.20054 7.83329 1.38811C7.70617 1.13011 7.57327 0.875326 7.43475 0.62391Z"
+                        fill="#C0BDC8"
+                      />
+                    </svg>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
+                      <path
+                        d="M7.43475 0.62391C7.18046 0.162391 6.50812 0.162391 6.25384 0.62391C6.11532 0.875326 5.98241 1.13011 5.8553 1.38811C5.455 2.20054 5.11207 3.04481 4.8316 3.91596C4.73566 4.21394 4.45059 4.42091 4.12433 4.42957C3.35439 4.45001 2.58585 4.51336 1.82374 4.62092C1.60609 4.65164 1.38959 4.68583 1.17431 4.72345C0.639016 4.81697 0.438157 5.42729 0.818277 5.79924C0.904986 5.88408 0.99243 5.96822 1.0806 6.05163C1.73992 6.67541 2.43978 7.25898 3.17597 7.79826C3.42989 7.98426 3.53427 8.30335 3.43722 8.5946C3.13318 9.50709 2.89787 10.4497 2.73724 11.4166C2.70502 11.6106 2.67581 11.8055 2.64965 12.0013C2.57995 12.523 3.13895 12.8914 3.62415 12.6427C3.79735 12.554 3.96901 12.4627 4.13909 12.3691C4.91945 11.9396 5.66656 11.4595 6.37572 10.9335C6.65097 10.7293 7.03762 10.7293 7.31286 10.9335C8.02202 11.4595 8.76913 11.9396 9.54949 12.3691C9.71957 12.4627 9.89124 12.554 10.0644 12.6427C10.5496 12.8914 11.1086 12.523 11.0389 12.0013C11.0128 11.8055 10.9836 11.6106 10.9514 11.4166C10.7907 10.4497 10.5554 9.50709 10.2514 8.5946C10.1543 8.30335 10.2587 7.98426 10.5126 7.79826C11.2488 7.25898 11.9487 6.67541 12.608 6.05163C12.6962 5.96822 12.7836 5.88408 12.8703 5.79924C13.2504 5.42729 13.0496 4.81697 12.5143 4.72345C12.299 4.68583 12.0825 4.65164 11.8648 4.62092C11.1027 4.51336 10.3342 4.45001 9.56426 4.42957C9.23799 4.42091 8.95292 4.21394 8.85698 3.91596C8.57651 3.04481 8.23358 2.20054 7.83329 1.38811C7.70617 1.13011 7.57327 0.875326 7.43475 0.62391Z"
+                        fill="#C0BDC8"
+                      />
+                    </svg>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
+                      <path
+                        d="M7.43475 0.62391C7.18046 0.162391 6.50812 0.162391 6.25384 0.62391C6.11532 0.875326 5.98241 1.13011 5.8553 1.38811C5.455 2.20054 5.11207 3.04481 4.8316 3.91596C4.73566 4.21394 4.45059 4.42091 4.12433 4.42957C3.35439 4.45001 2.58585 4.51336 1.82374 4.62092C1.60609 4.65164 1.38959 4.68583 1.17431 4.72345C0.639016 4.81697 0.438157 5.42729 0.818277 5.79924C0.904986 5.88408 0.99243 5.96822 1.0806 6.05163C1.73992 6.67541 2.43978 7.25898 3.17597 7.79826C3.42989 7.98426 3.53427 8.30335 3.43722 8.5946C3.13318 9.50709 2.89787 10.4497 2.73724 11.4166C2.70502 11.6106 2.67581 11.8055 2.64965 12.0013C2.57995 12.523 3.13895 12.8914 3.62415 12.6427C3.79735 12.554 3.96901 12.4627 4.13909 12.3691C4.91945 11.9396 5.66656 11.4595 6.37572 10.9335C6.65097 10.7293 7.03762 10.7293 7.31286 10.9335C8.02202 11.4595 8.76913 11.9396 9.54949 12.3691C9.71957 12.4627 9.89124 12.554 10.0644 12.6427C10.5496 12.8914 11.1086 12.523 11.0389 12.0013C11.0128 11.8055 10.9836 11.6106 10.9514 11.4166C10.7907 10.4497 10.5554 9.50709 10.2514 8.5946C10.1543 8.30335 10.2587 7.98426 10.5126 7.79826C11.2488 7.25898 11.9487 6.67541 12.608 6.05163C12.6962 5.96822 12.7836 5.88408 12.8703 5.79924C13.2504 5.42729 13.0496 4.81697 12.5143 4.72345C12.299 4.68583 12.0825 4.65164 11.8648 4.62092C11.1027 4.51336 10.3342 4.45001 9.56426 4.42957C9.23799 4.42091 8.95292 4.21394 8.85698 3.91596C8.57651 3.04481 8.23358 2.20054 7.83329 1.38811C7.70617 1.13011 7.57327 0.875326 7.43475 0.62391Z"
+                        fill="#C0BDC8"
+                      />
+                    </svg>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
+                      <path
+                        d="M7.43475 0.62391C7.18046 0.162391 6.50812 0.162391 6.25384 0.62391C6.11532 0.875326 5.98241 1.13011 5.8553 1.38811C5.455 2.20054 5.11207 3.04481 4.8316 3.91596C4.73566 4.21394 4.45059 4.42091 4.12433 4.42957C3.35439 4.45001 2.58585 4.51336 1.82374 4.62092C1.60609 4.65164 1.38959 4.68583 1.17431 4.72345C0.639016 4.81697 0.438157 5.42729 0.818277 5.79924C0.904986 5.88408 0.99243 5.96822 1.0806 6.05163C1.73992 6.67541 2.43978 7.25898 3.17597 7.79826C3.42989 7.98426 3.53427 8.30335 3.43722 8.5946C3.13318 9.50709 2.89787 10.4497 2.73724 11.4166C2.70502 11.6106 2.67581 11.8055 2.64965 12.0013C2.57995 12.523 3.13895 12.8914 3.62415 12.6427C3.79735 12.554 3.96901 12.4627 4.13909 12.3691C4.91945 11.9396 5.66656 11.4595 6.37572 10.9335C6.65097 10.7293 7.03762 10.7293 7.31286 10.9335C8.02202 11.4595 8.76913 11.9396 9.54949 12.3691C9.71957 12.4627 9.89124 12.554 10.0644 12.6427C10.5496 12.8914 11.1086 12.523 11.0389 12.0013C11.0128 11.8055 10.9836 11.6106 10.9514 11.4166C10.7907 10.4497 10.5554 9.50709 10.2514 8.5946C10.1543 8.30335 10.2587 7.98426 10.5126 7.79826C11.2488 7.25898 11.9487 6.67541 12.608 6.05163C12.6962 5.96822 12.7836 5.88408 12.8703 5.79924C13.2504 5.42729 13.0496 4.81697 12.5143 4.72345C12.299 4.68583 12.0825 4.65164 11.8648 4.62092C11.1027 4.51336 10.3342 4.45001 9.56426 4.42957C9.23799 4.42091 8.95292 4.21394 8.85698 3.91596C8.57651 3.04481 8.23358 2.20054 7.83329 1.38811C7.70617 1.13011 7.57327 0.875326 7.43475 0.62391Z"
+                        fill="#C0BDC8"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Курорт/отель -->
+              <div class="search-field">
+                <div class="search-field__title">
+                  <span class="search-field__label">Курорт/отель</span>
+                  <svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    class="icon"
+                  >
+                    <path
+                      d="M0.800781 1L6.80078 7L12.8008 1"
+                      stroke="#96989C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Питание -->
+              <div class="search-field">
+                <div class="search-field__title">
+                  <span class="search-field__label">Питание</span>
+                  <svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    class="icon"
+                  >
+                    <path
+                      d="M0.800781 1L6.80078 7L12.8008 1"
+                      stroke="#96989C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Рейтинг -->
+              <div class="search-field">
+                <div class="search-field__title">
+                  <span class="search-field__label">Рейтинг</span>
+                  <svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    class="icon"
+                  >
+                    <path
+                      d="M0.800781 1L6.80078 7L12.8008 1"
+                      stroke="#96989C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Услуги отеля -->
+              <div class="search-field">
+                <div class="search-field__title">
+                  <span class="search-field__label">Услуги отеля</span>
+                  <svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    class="icon"
+                  >
+                    <path
+                      d="M0.800781 1L6.80078 7L12.8008 1"
+                      stroke="#96989C"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <section class="tour-catalog tour-catalog--tour-page mb-fluid-32-40">
+            <h2 class="tour-catalog__title mb-fluid-32-40">
+              Школьные туры и детские лагеря
+            </h2>
+            <!-- Сетка туров -->
+            <div class="tour-catalog__grid mb-fluid-32-40">
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img
+                    src="/assets/images/content/card-destination.jpg"
+                    alt=""
+                  />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--blue">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.49798 0.381205C6.53714 0.046139 6.14344 -0.136636 5.94131 0.122772L0.739909 6.79801C0.568283 7.01827 0.714734 7.35266 0.982822 7.35266H5.64116C5.83136 7.35266 5.97851 7.53094 5.95492 7.73277L5.50072 11.6188C5.46156 11.9539 5.85526 12.1366 6.05739 11.8772L11.2588 5.20199C11.4304 4.98173 11.284 4.64734 11.0159 4.64734H6.35754C6.16734 4.64734 6.02019 4.46906 6.04378 4.26723L6.49798 0.381205Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Новинка</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--orange">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C9.66384e-08 2.68629 2.68629 9.66416e-08 6 0ZM4.38281 7.45605C4.0562 7.26191 3.62868 7.34352 3.39746 7.65527C3.16644 7.96718 3.21336 8.39926 3.49414 8.65527L3.55371 8.7041L3.81934 8.88574C4.45493 9.2858 5.20114 9.51855 6 9.51855C6.91307 9.51855 7.75738 9.21468 8.44629 8.7041C8.77887 8.45747 8.84898 7.98798 8.60254 7.65527C8.35593 7.32277 7.8864 7.25271 7.55371 7.49902C7.10883 7.82878 6.57409 8.01855 6 8.01855C5.4976 8.01855 5.0254 7.87345 4.61719 7.61621L4.44629 7.49902L4.38281 7.45605ZM8.06836 3.44141C7.51607 3.44141 7.06836 3.88912 7.06836 4.44141C7.06844 4.99362 7.51612 5.44141 8.06836 5.44141C8.62038 5.44115 9.06828 4.99347 9.06836 4.44141C9.06836 3.88928 8.62043 3.44166 8.06836 3.44141ZM3.67871 3.40723C3.12653 3.40731 2.67876 3.85503 2.67871 4.40723C2.67871 4.95946 3.1265 5.40715 3.67871 5.40723C4.231 5.40723 4.67871 4.95951 4.67871 4.40723C4.67866 3.85498 4.23097 3.40723 3.67871 3.40723Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Можно детям</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--pink">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.63965 0C6.82571 1.3922 6.84365 5.55324 6.84375 5.59961C6.86045 5.56766 7.91334 3.56649 10.0479 2.59961C10.7378 4.62752 11.668 6.84367 10.8496 8.80176C10.0646 10.6799 8.20805 11.9998 6.04297 12C3.16744 12 0.835938 9.67168 0.835938 6.7998C0.835987 3.92807 1.92983 2.75378 3.63965 0ZM2.66797 6.16699C2.39183 6.16699 2.16797 6.39085 2.16797 6.66699C2.16815 8.78382 3.88414 10.4998 6.00098 10.5C6.27701 10.5 6.5008 10.276 6.50098 10C6.5008 9.72401 6.27701 9.5 6.00098 9.5C4.43643 9.49982 3.16815 8.23154 3.16797 6.66699C3.16797 6.39085 2.94411 6.16699 2.66797 6.16699Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      <span class="tour-card__badge-text">Хит сезона</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Республика Дагестан</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">
+                      Дагестан – путешествие в сердце Кавказа
+                    </h3>
+
+                    <p class="tour-card__description">
+                      Дагестан — это не просто регион на карте России. Это
+                      кладезь природной красоты, истории и культур…
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      24 мая — 30 мая
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+
+                        7 дней
+                      </span>
+                    </div>
+                    <div class="tour-card__price">69 860 ₽</div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img src="/assets/images/content/vladivostok.jpg" alt="" />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--orange">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C9.66384e-08 2.68629 2.68629 9.66416e-08 6 0ZM4.38281 7.45605C4.0562 7.26191 3.62868 7.34352 3.39746 7.65527C3.16644 7.96718 3.21336 8.39926 3.49414 8.65527L3.55371 8.7041L3.81934 8.88574C4.45493 9.2858 5.20114 9.51855 6 9.51855C6.91307 9.51855 7.75738 9.21468 8.44629 8.7041C8.77887 8.45747 8.84898 7.98798 8.60254 7.65527C8.35593 7.32277 7.8864 7.25271 7.55371 7.49902C7.10883 7.82878 6.57409 8.01855 6 8.01855C5.4976 8.01855 5.0254 7.87345 4.61719 7.61621L4.44629 7.49902L4.38281 7.45605ZM8.06836 3.44141C7.51607 3.44141 7.06836 3.88912 7.06836 4.44141C7.06844 4.99362 7.51612 5.44141 8.06836 5.44141C8.62038 5.44115 9.06828 4.99347 9.06836 4.44141C9.06836 3.88928 8.62043 3.44166 8.06836 3.44141ZM3.67871 3.40723C3.12653 3.40731 2.67876 3.85503 2.67871 4.40723C2.67871 4.95946 3.1265 5.40715 3.67871 5.40723C4.231 5.40723 4.67871 4.95951 4.67871 4.40723C4.67866 3.85498 4.23097 3.40723 3.67871 3.40723Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Можно детям</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Приморский край</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">ВЛАДИВОСТОК июль 2025</h3>
+
+                    <p class="tour-card__description">
+                      Экскурсионный тур «Открой для себя ВЛАДИВОСТОК»
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      26 июля — 30 июля
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+                        4 дня
+                      </span>
+                    </div>
+                    <div class="tour-card__price">от 10 000 ₽</div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img src="/assets/images/content/komsomolsk.jpg" alt="" />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--blue">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.49798 0.381205C6.53714 0.046139 6.14344 -0.136636 5.94131 0.122772L0.739909 6.79801C0.568283 7.01827 0.714734 7.35266 0.982822 7.35266H5.64116C5.83136 7.35266 5.97851 7.53094 5.95492 7.73277L5.50072 11.6188C5.46156 11.9539 5.85526 12.1366 6.05739 11.8772L11.2588 5.20199C11.4304 4.98173 11.284 4.64734 11.0159 4.64734H6.35754C6.16734 4.64734 6.02019 4.46906 6.04378 4.26723L6.49798 0.381205Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Новинка</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Хабаровский край</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">
+                      Комсомольск-на-Амуре (Вариант 2)
+                    </h3>
+
+                    <p class="tour-card__description">
+                      КОМСОМОЛЬСК-НА-АМУРЕ – промышленное сердце Хабаровского
+                      края!
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      25 мая — 30 мая
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+                        5 дней
+                      </span>
+                    </div>
+                    <div class="tour-card__price">от 19 950 ₽</div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img src="/assets/images/content/vostochnyi.jpg" alt="" />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--pink">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.63965 0C6.82571 1.3922 6.84365 5.55324 6.84375 5.59961C6.86045 5.56766 7.91334 3.56649 10.0479 2.59961C10.7378 4.62752 11.668 6.84367 10.8496 8.80176C10.0646 10.6799 8.20805 11.9998 6.04297 12C3.16744 12 0.835938 9.67168 0.835938 6.7998C0.835987 3.92807 1.92983 2.75378 3.63965 0ZM2.66797 6.16699C2.39183 6.16699 2.16797 6.39085 2.16797 6.66699C2.16815 8.78382 3.88414 10.4998 6.00098 10.5C6.27701 10.5 6.5008 10.276 6.50098 10C6.5008 9.72401 6.27701 9.5 6.00098 9.5C4.43643 9.49982 3.16815 8.23154 3.16797 6.66699C3.16797 6.39085 2.94411 6.16699 2.66797 6.16699Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      <span class="tour-card__badge-text">Хит сезона</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Амурская область</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">
+                      ПУСК РАКЕТЫ с космодрома «Восточный» и посещение г.
+                      Благовещенска
+                    </h3>
+
+                    <p class="tour-card__description">
+                      Ваше приключение начнется с отправления из Хабаровска на
+                      железнодорожном транспорте. Вас ждет увлекательное
+                      путешествие сквозь живописные пейзажи Дальнего Востока,
+                      которые оставят незабываемые впечатления.
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      23 июля — 26 июля
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+                        3 дня
+                      </span>
+                    </div>
+                    <div class="tour-card__price">от 12 950 ₽</div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img src="/assets/images/content/amut.jpg" alt="" />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--blue">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.49798 0.381205C6.53714 0.046139 6.14344 -0.136636 5.94131 0.122772L0.739909 6.79801C0.568283 7.01827 0.714734 7.35266 0.982822 7.35266H5.64116C5.83136 7.35266 5.97851 7.53094 5.95492 7.73277L5.50072 11.6188C5.46156 11.9539 5.85526 12.1366 6.05739 11.8772L11.2588 5.20199C11.4304 4.98173 11.284 4.64734 11.0159 4.64734H6.35754C6.16734 4.64734 6.02019 4.46906 6.04378 4.26723L6.49798 0.381205Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Новинка</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Хабаровский край</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">
+                      ОЗЕРО АМУТ – 2025 Солнечный район
+                    </h3>
+
+                    <p class="tour-card__description">
+                      Экскурсионный тур выходного дня «Солнечный район. ОЗЕРО
+                      АМУТ — 2025»
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      20 июня — 23 июня
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+                        3 дня
+                      </span>
+                    </div>
+                    <div class="tour-card__price">от 15 000 ₽</div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img
+                    src="/assets/images/content/card-destination.jpg"
+                    alt=""
+                  />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--blue">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.49798 0.381205C6.53714 0.046139 6.14344 -0.136636 5.94131 0.122772L0.739909 6.79801C0.568283 7.01827 0.714734 7.35266 0.982822 7.35266H5.64116C5.83136 7.35266 5.97851 7.53094 5.95492 7.73277L5.50072 11.6188C5.46156 11.9539 5.85526 12.1366 6.05739 11.8772L11.2588 5.20199C11.4304 4.98173 11.284 4.64734 11.0159 4.64734H6.35754C6.16734 4.64734 6.02019 4.46906 6.04378 4.26723L6.49798 0.381205Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Новинка</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--orange">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C9.66384e-08 2.68629 2.68629 9.66416e-08 6 0ZM4.38281 7.45605C4.0562 7.26191 3.62868 7.34352 3.39746 7.65527C3.16644 7.96718 3.21336 8.39926 3.49414 8.65527L3.55371 8.7041L3.81934 8.88574C4.45493 9.2858 5.20114 9.51855 6 9.51855C6.91307 9.51855 7.75738 9.21468 8.44629 8.7041C8.77887 8.45747 8.84898 7.98798 8.60254 7.65527C8.35593 7.32277 7.8864 7.25271 7.55371 7.49902C7.10883 7.82878 6.57409 8.01855 6 8.01855C5.4976 8.01855 5.0254 7.87345 4.61719 7.61621L4.44629 7.49902L4.38281 7.45605ZM8.06836 3.44141C7.51607 3.44141 7.06836 3.88912 7.06836 4.44141C7.06844 4.99362 7.51612 5.44141 8.06836 5.44141C8.62038 5.44115 9.06828 4.99347 9.06836 4.44141C9.06836 3.88928 8.62043 3.44166 8.06836 3.44141ZM3.67871 3.40723C3.12653 3.40731 2.67876 3.85503 2.67871 4.40723C2.67871 4.95946 3.1265 5.40715 3.67871 5.40723C4.231 5.40723 4.67871 4.95951 4.67871 4.40723C4.67866 3.85498 4.23097 3.40723 3.67871 3.40723Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Можно детям</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--pink">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.63965 0C6.82571 1.3922 6.84365 5.55324 6.84375 5.59961C6.86045 5.56766 7.91334 3.56649 10.0479 2.59961C10.7378 4.62752 11.668 6.84367 10.8496 8.80176C10.0646 10.6799 8.20805 11.9998 6.04297 12C3.16744 12 0.835938 9.67168 0.835938 6.7998C0.835987 3.92807 1.92983 2.75378 3.63965 0ZM2.66797 6.16699C2.39183 6.16699 2.16797 6.39085 2.16797 6.66699C2.16815 8.78382 3.88414 10.4998 6.00098 10.5C6.27701 10.5 6.5008 10.276 6.50098 10C6.5008 9.72401 6.27701 9.5 6.00098 9.5C4.43643 9.49982 3.16815 8.23154 3.16797 6.66699C3.16797 6.39085 2.94411 6.16699 2.66797 6.16699Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      <span class="tour-card__badge-text">хит сезона</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Республика Дагестан</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">
+                      Дагестан – путешествие в сердце Кавказа
+                    </h3>
+
+                    <p class="tour-card__description">
+                      Дагестан — это не просто регион на карте России. Это
+                      кладезь природной красоты, истории и культур…
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      24 мая — 30 мая
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+
+                        7 дней
+                      </span>
+                    </div>
+                    <div class="tour-card__price">69 860 ₽</div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img
+                    src="/assets/images/content/card-destination.jpg"
+                    alt=""
+                  />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--blue">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.49798 0.381205C6.53714 0.046139 6.14344 -0.136636 5.94131 0.122772L0.739909 6.79801C0.568283 7.01827 0.714734 7.35266 0.982822 7.35266H5.64116C5.83136 7.35266 5.97851 7.53094 5.95492 7.73277L5.50072 11.6188C5.46156 11.9539 5.85526 12.1366 6.05739 11.8772L11.2588 5.20199C11.4304 4.98173 11.284 4.64734 11.0159 4.64734H6.35754C6.16734 4.64734 6.02019 4.46906 6.04378 4.26723L6.49798 0.381205Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Новинка</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--orange">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C9.66384e-08 2.68629 2.68629 9.66416e-08 6 0ZM4.38281 7.45605C4.0562 7.26191 3.62868 7.34352 3.39746 7.65527C3.16644 7.96718 3.21336 8.39926 3.49414 8.65527L3.55371 8.7041L3.81934 8.88574C4.45493 9.2858 5.20114 9.51855 6 9.51855C6.91307 9.51855 7.75738 9.21468 8.44629 8.7041C8.77887 8.45747 8.84898 7.98798 8.60254 7.65527C8.35593 7.32277 7.8864 7.25271 7.55371 7.49902C7.10883 7.82878 6.57409 8.01855 6 8.01855C5.4976 8.01855 5.0254 7.87345 4.61719 7.61621L4.44629 7.49902L4.38281 7.45605ZM8.06836 3.44141C7.51607 3.44141 7.06836 3.88912 7.06836 4.44141C7.06844 4.99362 7.51612 5.44141 8.06836 5.44141C8.62038 5.44115 9.06828 4.99347 9.06836 4.44141C9.06836 3.88928 8.62043 3.44166 8.06836 3.44141ZM3.67871 3.40723C3.12653 3.40731 2.67876 3.85503 2.67871 4.40723C2.67871 4.95946 3.1265 5.40715 3.67871 5.40723C4.231 5.40723 4.67871 4.95951 4.67871 4.40723C4.67866 3.85498 4.23097 3.40723 3.67871 3.40723Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Можно детям</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--pink">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.63965 0C6.82571 1.3922 6.84365 5.55324 6.84375 5.59961C6.86045 5.56766 7.91334 3.56649 10.0479 2.59961C10.7378 4.62752 11.668 6.84367 10.8496 8.80176C10.0646 10.6799 8.20805 11.9998 6.04297 12C3.16744 12 0.835938 9.67168 0.835938 6.7998C0.835987 3.92807 1.92983 2.75378 3.63965 0ZM2.66797 6.16699C2.39183 6.16699 2.16797 6.39085 2.16797 6.66699C2.16815 8.78382 3.88414 10.4998 6.00098 10.5C6.27701 10.5 6.5008 10.276 6.50098 10C6.5008 9.72401 6.27701 9.5 6.00098 9.5C4.43643 9.49982 3.16815 8.23154 3.16797 6.66699C3.16797 6.39085 2.94411 6.16699 2.66797 6.16699Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      <span class="tour-card__badge-text">хит сезона</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Республика Дагестан</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">
+                      Дагестан – путешествие в сердце Кавказа
+                    </h3>
+
+                    <p class="tour-card__description">
+                      Дагестан — это не просто регион на карте России. Это
+                      кладезь природной красоты, истории и культур…
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      24 мая — 30 мая
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+
+                        7 дней
+                      </span>
+                    </div>
+                    <div class="tour-card__price">69 860 ₽</div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="/tury/demo-tur/"
+                class="tour-card tour-card--destination"
+              >
+                <div class="tour-card__media">
+                  <img
+                    src="/assets/images/content/card-destination.jpg"
+                    alt=""
+                  />
+                  <div class="tour-card__badges">
+                    <div class="tour-card__badge tour-card__badge--blue">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.49798 0.381205C6.53714 0.046139 6.14344 -0.136636 5.94131 0.122772L0.739909 6.79801C0.568283 7.01827 0.714734 7.35266 0.982822 7.35266H5.64116C5.83136 7.35266 5.97851 7.53094 5.95492 7.73277L5.50072 11.6188C5.46156 11.9539 5.85526 12.1366 6.05739 11.8772L11.2588 5.20199C11.4304 4.98173 11.284 4.64734 11.0159 4.64734H6.35754C6.16734 4.64734 6.02019 4.46906 6.04378 4.26723L6.49798 0.381205Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Новинка</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--orange">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C9.66384e-08 2.68629 2.68629 9.66416e-08 6 0ZM4.38281 7.45605C4.0562 7.26191 3.62868 7.34352 3.39746 7.65527C3.16644 7.96718 3.21336 8.39926 3.49414 8.65527L3.55371 8.7041L3.81934 8.88574C4.45493 9.2858 5.20114 9.51855 6 9.51855C6.91307 9.51855 7.75738 9.21468 8.44629 8.7041C8.77887 8.45747 8.84898 7.98798 8.60254 7.65527C8.35593 7.32277 7.8864 7.25271 7.55371 7.49902C7.10883 7.82878 6.57409 8.01855 6 8.01855C5.4976 8.01855 5.0254 7.87345 4.61719 7.61621L4.44629 7.49902L4.38281 7.45605ZM8.06836 3.44141C7.51607 3.44141 7.06836 3.88912 7.06836 4.44141C7.06844 4.99362 7.51612 5.44141 8.06836 5.44141C8.62038 5.44115 9.06828 4.99347 9.06836 4.44141C9.06836 3.88928 8.62043 3.44166 8.06836 3.44141ZM3.67871 3.40723C3.12653 3.40731 2.67876 3.85503 2.67871 4.40723C2.67871 4.95946 3.1265 5.40715 3.67871 5.40723C4.231 5.40723 4.67871 4.95951 4.67871 4.40723C4.67866 3.85498 4.23097 3.40723 3.67871 3.40723Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span class="tour-card__badge-text">Можно детям</span>
+                    </div>
+
+                    <div class="tour-card__badge tour-card__badge--pink">
+                      <svg
+                        class="tour-card__badge-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.63965 0C6.82571 1.3922 6.84365 5.55324 6.84375 5.59961C6.86045 5.56766 7.91334 3.56649 10.0479 2.59961C10.7378 4.62752 11.668 6.84367 10.8496 8.80176C10.0646 10.6799 8.20805 11.9998 6.04297 12C3.16744 12 0.835938 9.67168 0.835938 6.7998C0.835987 3.92807 1.92983 2.75378 3.63965 0ZM2.66797 6.16699C2.39183 6.16699 2.16797 6.39085 2.16797 6.66699C2.16815 8.78382 3.88414 10.4998 6.00098 10.5C6.27701 10.5 6.5008 10.276 6.50098 10C6.5008 9.72401 6.27701 9.5 6.00098 9.5C4.43643 9.49982 3.16815 8.23154 3.16797 6.66699C3.16797 6.39085 2.94411 6.16699 2.66797 6.16699Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      <span class="tour-card__badge-text">хит сезона</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tour-card__body">
+                  <div class="tour-card__summary">
+                    <div class="tour-card__meta tour-card__meta--location">
+                      <svg
+                        class="tour-card__meta-icon"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.34316 1.45419C3.31309 0.523087 4.62859 0 6.00028 0C7.37197 0 8.68747 0.523087 9.6574 1.45419C13.2102 4.86474 9.69534 9.58485 6.38422 11.8805C6.15435 12.0398 5.84621 12.0398 5.61634 11.8805C2.30522 9.58485 -1.20961 4.86474 2.34316 1.45419ZM6.00028 6C6.7577 6 7.37171 5.40305 7.37171 4.66667C7.37171 3.93029 6.7577 3.33333 6.00028 3.33333C5.24286 3.33333 4.62885 3.93029 4.62885 4.66667C4.62885 5.40305 5.24286 6 6.00028 6Z"
+                          fill="#96989C"
+                        />
+                      </svg>
+                      <span class="tour-card__location-text"
+                        >Республика Дагестан</span
+                      >
+                    </div>
+
+                    <h3 class="tour-card__title">
+                      Дагестан – путешествие в сердце Кавказа
+                    </h3>
+
+                    <p class="tour-card__description">
+                      Дагестан — это не просто регион на карте России. Это
+                      кладезь природной красоты, истории и культур…
+                    </p>
+                  </div>
+
+                  <div class="tour-card__footer">
+                    <div class="tour-card__dates">
+                      24 мая — 30 мая
+                      <span class="tour-card__duration">
+                        <svg
+                          class="icon-sun"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g opacity="0.8">
+                            <path
+                              d="M8 2V3.55522M8 14.4448V16M2.55556 8.99848H1M15 8.99848H13.4444M13.4444 3.55522L11.8889 5.11044M2.55556 3.55522L4.11111 5.11044M4.11092 12.8866L2.55537 14.4418M13.4445 14.4418L11.8891 12.8865"
+                              stroke="#96989C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M11.1109 8.99848C11.1109 10.7163 9.718 12.1089 7.99978 12.1089C6.28156 12.1089 4.88867 10.7163 4.88867 8.99848C4.88867 7.28064 6.28156 5.88805 7.99978 5.88805C9.718 5.88805 11.1109 7.28064 11.1109 8.99848Z"
+                              fill="#96989C"
+                            />
+                          </g>
+                        </svg>
+
+                        7 дней
+                      </span>
+                    </div>
+                    <div class="tour-card__price">69 860 ₽</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="tour-catalog__more">
+              <button
+                class="btn btn--load-more"
+                type="button"
+                data-load-more="tours"
+              >
+                Показать ещё
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="container">
+          <div class="form mb-fluid-32-50">
+            <div class="form__inner">
+              <div class="form__content">
+                <h3 class="form__title">Куда отправимся?</h3>
+                <p class="form__description">
+                  Заполните форму, и наш менеджер свяжется с вами, чтобы
+                  предложить самые интересные и выгодные варианты
+                </p>
+                <form class="form__fields">
+                  <div class="form__inputs">
+                    <div class="form__field">
+                      <label class="form__label" for="faq-name">Имя</label>
+                      <input
+                        class="form__input"
+                        id="faq-name"
+                        type="text"
+                        placeholder="Иванов Иван"
+                      />
+                    </div>
+                    <div class="form__field">
+                      <label class="form__label" for="faq-phone">Телефон</label>
+                      <input
+                        class="form__input"
+                        id="faq-phone"
+                        type="tel"
+                        placeholder="+7 900 847-34-43"
+                      />
+                    </div>
+                    <div class="form__field">
+                      <label class="form__label" for="faq-name"
+                        >Комментарий</label
+                      >
+                      <input
+                        class="form__input"
+                        id="faq-name"
+                        type="text"
+                        placeholder="Ваш вопрос"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn--accent btn--block mb-16"
+                    type="submit"
+                  >
+                    Оставить заявку
+                  </button>
+                  <p class="form__privacy">
+                    Нажимая на кнопку «Оставить заявку», вы даёте согласие на
+                    <a class="form__link" href="#"
+                      >обработку персональных данных</a
+                    >
+                    в соответствии с
+                    <a class="form__link" href="#"
+                      >политикой конфиденциальности</a
+                    >
+                  </p>
+                </form>
+              </div>
+
+              <div class="form__destination">
+                <div class="cover-image">
+                  <img src="/assets/images/content/beach.jpg" alt="Пляж" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="container">
+          <div class="site-footer__grid">
+            <!-- Col 1 -->
+            <div class="site-footer__col site-footer__col--brand">
+              <a href="/" class="logo logo--footer">
+                <img
+                  src="/assets/images/logos/logo-footer.png"
+                  alt="Логотип Манго ДВ"
+                />
+              </a>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="site-footer__col">
+              <h4 class="site-footer__title">Туры по направлениям</h4>
+              <ul class="site-footer__list">
+                <li><a href="/tury/goryashchie/">Горящие туры</a></li>
+                <li><a href="/tury/po-stranam/">По странам</a></li>
+                <li>
+                  <a href="/tury/po-kitayu/">По Китаю</a>
+                </li>
+                <li><a href="/tury/po-rossii/">По России</a></li>
+                <li><a href="/tury/po-dv/">По ДВ</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="site-footer__col">
+              <h4 class="site-footer__title">Услуги и бонусы</h4>
+              <ul class="site-footer__list">
+                <li><a href="/uslugi/vizy/">Визы</a></li>
+                <li><a href="/uslugi/aviabilety/">Авиабилеты</a></li>
+                <li>
+                  <a href="/uslugi/premium/">Премиум-сервис в путешествии</a>
+                </li>
+                <li>
+                  <a href="/uslugi/podderzhka/">Поддержка туристов</a>
+                </li>
+                <li>
+                  <a href="/uslugi/programma-loyalnosti/"
+                    >Программа лояльности</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="site-footer__col">
+              <h4 class="site-footer__title">Контакты</h4>
+              <ul class="site-footer__list">
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      width="10"
+                      height="12"
+                      viewBox="0 0 10 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 0C6.33358 0 7.61268 0.523001 8.55566 1.4541C12.0097 4.86465 8.59219 9.58524 5.37305 11.8809C5.14971 12.0399 4.85028 12.0399 4.62695 11.8809C1.40782 9.58525 -2.00968 4.86465 1.44434 1.4541C2.38731 0.52301 3.66643 9.84971e-06 5 0ZM5 3.33301C4.26379 3.3332 3.66699 3.93073 3.66699 4.66699C3.66721 5.40306 4.26392 5.9998 5 6C5.73624 6 6.33376 5.40319 6.33398 4.66699C6.33398 3.93061 5.73638 3.33301 5 3.33301Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">
+                    г. Хабаровск, ул. Дикопольцева, 10, оф. 4
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.39997 7.68098C6.80332 9.36142 2.73054 5.32522 4.3333 3.63836C5.31188 2.60842 4.20642 1.43138 3.59453 0.566226C2.44616 -1.05748 -0.074858 1.18427 0.00170545 2.61029C0.243152 7.10723 5.10769 12.4364 9.81835 11.9716C11.292 11.8262 12.9852 9.16477 11.2949 8.19213C10.4496 7.70577 9.28947 6.74479 8.39997 7.68098Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">+7 (800) 600–84–64</div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 14 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.571289 4.2C0.571289 3.0799 0.571289 2.51984 0.789276 2.09202C0.981023 1.71569 1.28698 1.40973 1.66331 1.21799C2.09113 1 2.65118 1 3.77129 1H10.2284C11.3485 1 11.9086 1 12.3364 1.21799C12.7127 1.40973 13.0187 1.71569 13.2104 2.09202C13.4284 2.51984 13.4284 3.0799 13.4284 4.2V7.8C13.4284 8.9201 13.4284 9.48016 13.2104 9.90798C13.0187 10.2843 12.7127 10.5903 12.3364 10.782C11.9086 11 11.3485 11 10.2284 11H3.77129C2.65118 11 2.09113 11 1.66331 10.782C1.28698 10.5903 0.981023 10.2843 0.789276 9.90798C0.571289 9.48016 0.571289 8.92011 0.571289 7.8V4.2Z"
+                        fill="#595959"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.571289 3.14286L5.22482 6.24521C5.86633 6.67289 6.18709 6.88673 6.53378 6.96981C6.84016 7.04323 7.15956 7.04323 7.46594 6.96981C7.81263 6.88673 8.13339 6.67289 8.7749 6.24521L13.4284 3.14286"
+                        fill="#595959"
+                      />
+                      <path
+                        d="M0.571289 3.14286L5.22482 6.24521C5.86633 6.67289 6.18709 6.88673 6.53378 6.96981C6.84016 7.04323 7.15956 7.04323 7.46594 6.96981C7.81263 6.88673 8.13339 6.67289 8.7749 6.24521L13.4284 3.14286M3.77129 11H10.2284C11.3485 11 11.9086 11 12.3364 10.782C12.7127 10.5903 13.0187 10.2843 13.2104 9.90798C13.4284 9.48016 13.4284 8.92011 13.4284 7.8V4.2C13.4284 3.0799 13.4284 2.51984 13.2104 2.09202C13.0187 1.71569 12.7127 1.40973 12.3364 1.21799C11.9086 1 11.3485 1 10.2284 1H3.77129C2.65118 1 2.09113 1 1.66331 1.21799C1.28698 1.40973 0.981023 1.71569 0.789276 2.09202C0.571289 2.51984 0.571289 3.07989 0.571289 4.2V7.8C0.571289 8.92011 0.571289 9.48016 0.789276 9.90798C0.981023 10.2843 1.28698 10.5903 1.66331 10.782C2.09113 11 2.65118 11 3.77129 11Z"
+                        stroke="#F5F4FA"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">mango-dv@mail.ru</div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 5 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">Юридическая информация</h4>
+              <p class="site-footer__text">
+                Номер лицензии в реестре турагенств: КМ100193
+              </p>
+              <p class="site-footer__text">
+                Номер в едином Федеральном Реестре Туроператоров: РТО 022489
+              </p>
+            </div>
+
+            <!-- Col 6 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">Виды отдыха</h4>
+              <ul class="site-footer__list">
+                <li><a href="/vidy-otdykha/plyazhnye/">Пляжный отдых</a></li>
+                <li>
+                  <a href="/vidy-otdykha/ekskursii-odnogo-dnya/"
+                    >Экскурсии одного для</a
+                  >
+                </li>
+                <li>
+                  <a href="/vidy-otdykha/shkolnye-tury-i-lagerya/"
+                    >Школьные туры и детские лагеря</a
+                  >
+                </li>
+                <li><a href="/vidy-otdykha/vip">ВИП-туры</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 7 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">О нас</h4>
+              <ul class="site-footer__list">
+                <li><a href="/o-nas/o-kompanii/">О компании</a></li>
+                <li><a href="/o-nas/otzyvy/">Отзывы</a></li>
+                <li><a href="/o-nas/komanda">Команда</a></li>
+                <li><a href="/o-nas/komanda/">Контакты</a></li>
+                <li><a href="/novosti/">Новости</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 8 -->
+            <div class="site-footer__col site-footer__col--bottom">
+              <h4 class="site-footer__title">Мы в соцсетях</h4>
+              <ul class="site-footer__list">
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.02621 12.4335C6.03954 12.4335 5.07288 12.1669 4.22621 11.6669L4.02621 11.5469L1.94621 12.0935L2.49954 10.0669L2.36621 9.8602C1.81791 8.9849 1.52683 7.97305 1.52621 6.9402C1.52621 3.91353 3.99288 1.44687 7.01954 1.44687C8.48621 1.44687 9.86621 2.0202 10.8995 3.0602C11.4113 3.56944 11.8168 4.17523 12.0926 4.84242C12.3684 5.50961 12.509 6.22492 12.5062 6.94687C12.5195 9.97353 10.0529 12.4335 7.02621 12.4335ZM8.91288 7.78687C9.05954 7.84687 9.87288 8.24687 10.0395 8.32687C10.2062 8.40687 10.3062 8.4402 10.3529 8.51353C10.3995 8.58687 10.3995 8.91353 10.2595 9.3002C10.1262 9.68687 9.46621 10.0402 9.14621 10.0869C8.85954 10.1269 8.49954 10.1469 8.10621 10.0202C7.86621 9.94687 7.55954 9.84687 7.16621 9.67353C5.51288 8.9602 4.42621 7.29353 4.34621 7.1802L4.34491 7.17847C4.26002 7.0653 3.67288 6.28261 3.67288 5.47353C3.67288 4.6602 4.09954 4.2602 4.24621 4.09353C4.39954 3.92687 4.57288 3.88687 4.68621 3.88687H5.00621C5.10621 3.89353 5.24621 3.85353 5.37954 4.17353C5.51288 4.50687 5.84621 5.3202 5.88621 5.4002C5.92621 5.4802 5.95288 5.57353 5.89954 5.68687C5.84621 5.79353 5.81288 5.86687 5.73288 5.9602C5.65288 6.05353 5.55954 6.17353 5.48621 6.24687C5.39954 6.33353 5.31954 6.4202 5.41288 6.58687C5.51288 6.75353 5.83954 7.29353 6.33288 7.73353C6.95954 8.29353 7.49288 8.47353 7.65954 8.55353C7.82621 8.6402 7.92621 8.62687 8.01954 8.51353C8.11288 8.40687 8.42621 8.03353 8.53954 7.86687C8.65288 7.70687 8.75954 7.73353 8.91288 7.78687Z"
+                        fill="#595959"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.55788 0.833774C10.3602 1.16684 11.0883 1.65627 11.6995 2.27353C12.9462 3.5202 13.6329 5.1802 13.6329 6.94687C13.6329 10.5869 10.6662 13.5535 7.02621 13.5535C5.91954 13.5535 4.83288 13.2735 3.86621 12.7469L0.366211 13.6669L1.29954 10.2402C0.726211 9.2402 0.419544 8.10687 0.419544 6.9402C0.419544 3.3002 3.38621 0.333532 7.02621 0.333532C7.89493 0.330654 8.75554 0.500704 9.55788 0.833774ZM4.22621 11.6669C5.07288 12.1669 6.03954 12.4335 7.02621 12.4335C10.0529 12.4335 12.5195 9.97353 12.5062 6.94687C12.509 6.22492 12.3684 5.50961 12.0926 4.84242C11.8168 4.17523 11.4113 3.56944 10.8995 3.0602C9.86621 2.0202 8.48621 1.44687 7.01954 1.44687C3.99288 1.44687 1.52621 3.91353 1.52621 6.9402C1.52683 7.97305 1.81791 8.9849 2.36621 9.8602L2.49954 10.0669L1.94621 12.0935L4.02621 11.5469L4.22621 11.6669Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">WhatsApp</div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.99967 0.333496C3.31967 0.333496 0.333008 3.32016 0.333008 7.00016C0.333008 10.6802 3.31967 13.6668 6.99967 13.6668C10.6797 13.6668 13.6663 10.6802 13.6663 7.00016C13.6663 3.32016 10.6797 0.333496 6.99967 0.333496ZM10.093 4.86683C9.99301 5.92016 9.55967 8.48016 9.33967 9.66016C9.24634 10.1602 9.05967 10.3268 8.88634 10.3468C8.49967 10.3802 8.20634 10.0935 7.83301 9.84683C7.24634 9.46016 6.91301 9.22016 6.34634 8.84683C5.68634 8.4135 6.11301 8.1735 6.49301 7.78683C6.59301 7.68683 8.29967 6.1335 8.33301 5.9935C8.33764 5.97229 8.33702 5.95028 8.33121 5.92936C8.3254 5.90845 8.31458 5.88927 8.29967 5.8735C8.25967 5.84016 8.20634 5.8535 8.15967 5.86016C8.09967 5.8735 7.16634 6.4935 5.34634 7.72016C5.07967 7.90016 4.83967 7.9935 4.62634 7.98683C4.38634 7.98016 3.93301 7.8535 3.59301 7.74016C3.17301 7.60683 2.84634 7.5335 2.87301 7.30016C2.88634 7.18016 3.05301 7.06016 3.36634 6.9335C5.31301 6.08683 6.60634 5.52683 7.25301 5.26016C9.10634 4.48683 9.48634 4.3535 9.73967 4.3535C9.79301 4.3535 9.91967 4.36683 9.99967 4.4335C10.0663 4.48683 10.0863 4.56016 10.093 4.6135C10.0863 4.6535 10.0997 4.7735 10.093 4.86683Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">Telegram</div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item__icon">
+                    <svg
+                      viewBox="0 0 13 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.91 0.91C1.72191e-07 1.82867 0 3.29767 0 6.24V6.76C0 9.698 1.72191e-07 11.167 0.91 12.09C1.82867 13 3.29767 13 6.24 13H6.76C9.698 13 11.167 13 12.09 12.09C13 11.1713 13 9.70233 13 6.76V6.24C13 3.302 13 1.833 12.09 0.91C11.1713 1.72191e-07 9.70233 0 6.76 0H6.24C3.302 0 1.833 1.72191e-07 0.91 0.91ZM2.19267 3.95633H3.68333C3.731 6.435 4.823 7.48367 5.68967 7.70033V3.95633H7.08933V6.09267C7.943 6.00167 8.84433 5.02667 9.14767 3.952H10.543C10.4291 4.50827 10.2018 5.03509 9.87528 5.49959C9.54872 5.96408 9.12991 6.35627 8.645 6.65167C9.18626 6.92096 9.66425 7.30198 10.0474 7.76957C10.4306 8.23717 10.7103 8.78071 10.868 9.36433H9.32967C9.00033 8.33733 8.177 7.54 7.08933 7.43167V9.36433H6.916C3.952 9.36433 2.262 7.33633 2.19267 3.95633Z"
+                        fill="#595959"
+                      />
+                    </svg>
+                  </div>
+                  <div class="contact-item__text">Вконтакте</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="site-footer__legal">
+              <div class="site-footer__legal-links">
+                <a class="site-footer__copyright"
+                  >© Mango DV 2025. Все права защищены</a
+                >
+                <a href="/politikia-konfidentsialnosti/"
+                  >Политика конфиденциальности</a
+                >
+                <a href="/polzovatelskoe-soglashenie/"
+                  >Пользовательское соглашение</a
+                >
+                <a href="#"
+                  >Разработано в
+                  <span class="site-footer__dev"
+                    ><img
+                      src="/assets/images/logos/dark-studio-logo.png"
+                      alt="Логотип DarkStudio" /></span
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

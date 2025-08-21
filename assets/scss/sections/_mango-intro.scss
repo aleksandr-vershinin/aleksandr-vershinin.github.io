@@ -1,0 +1,122 @@
+.mango-intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 60%) minmax(280px, 40%);
+  align-items: stretch;
+  gap: 4px;
+  margin-top: 40px;
+  padding: 6px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #F5F4FA 0%, #FFFFFF 85%);
+
+  /* левая колонка (текст) */
+  &__content {
+    position: relative;
+    overflow: hidden; /* обрежет кавычки по краям */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px clamp(12px, 4.5vw, 98px) 24px;
+    padding-bottom: 181px; /* место под кавычки */
+    z-index: 0;
+  }
+
+  /* ПАРА КАВЫЧЕК — центрирование */
+  &__quotes {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 277.900848px;
+    height: 240.75px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 30px;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .quote-svg {
+    width: 124px;
+    height: 240.75px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    svg path {
+      fill: #F5F4FA;
+    }
+  }
+
+  /* заголовок/тексты */
+  &__title {
+    display: inline-block;
+    background: #4C9EFF;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 3vw, 40px);
+    line-height: 1.1;
+    padding: 10px 10px;
+    border-radius: 12px;
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 auto 16px;
+    z-index: 1;
+  }
+
+  &__text,
+  &__author {
+    max-width: 555px;
+    width: 100%;
+    margin: 16px auto 0;
+    text-align: center;
+    z-index: 1;
+  }
+
+  /* правая колонка (фото) — подстраивается по высоте левой */
+  &__photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    min-height: 0;
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 14%;
+    display: block;
+    border-radius: 20px;
+  }
+
+  /* мобила — один столбец */
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    &__photo {
+      position: relative;
+      height: auto;
+      max-height: 540px;
+    }
+    &__image {
+      position: static;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__photo {
+      position: relative;
+      height: 360px;
+    }
+  }
+}

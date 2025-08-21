@@ -1,0 +1,16 @@
+/* ===== Cover Image ===== */
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-2xl, 32px); // можно варьировать при необходимости
+  display: block;
+
+  &__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

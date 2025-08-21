@@ -1,0 +1,15 @@
+/* ===== Agencies ===== */
+.agencies-info {
+
+  &__title {
+    font-size: clamp(2.5rem, calc(1vw + 1.8rem), 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em; // use "em" for consistency
+  }
+
+  &__image-wrapper img {
+    width: 100%;
+    display: block; // ensures no inline gap
+    height: auto; // preserve aspect ratio, just in case
+  }
+}

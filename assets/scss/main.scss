@@ -1,0 +1,98 @@
+// ========================
+// Design Tokens
+// ========================
+// Переменные, цвета, брейкпоинты, радиусы и т.п.
+@use "tokens/variables";
+@use "tokens/breakpoints";
+
+// ========================
+// Base Styles
+// ========================
+// Сбросы, глобальное поведение, базовая типографика
+@use "base/reset";
+@use "base/globals";
+@use "base/typography";
+@use "base/utilities";
+
+// ========================
+// Layout Utilities
+// ========================
+// Контейнеры, сетки, обёртки
+@use "layout/wrapper";
+@use "layout/container";
+
+// ========================
+// UI Components
+// ========================
+// @use "components/meta-info";
+// @use "components/content-card";
+@use "components/stars";
+@use "components/accordion";
+@use "components/breadcrumbs";
+@use "components/btn";
+@use "components/tag";
+@use "components/scroll-row";
+@use "components/tour-card";
+@use "components/form";
+@use "components/info-card";
+@use "components/cover-image";
+@use "components/overlay-card";
+@use "components/article-card";
+@use "components/review-card";
+@use "components/service-card";
+@use "components/side-banner";
+@use "components/contacts-banner";
+@use "components/rating-banner";
+@use "components/bonus-offers";
+@use "components/order-panel";
+@use "components/main-slider";
+@use "components/gallery-slider";
+@use "components/partners-slider";
+@use "components/reviews-slider";
+@use "components/features-slider";
+@use "components/certificates-slider";
+@use "components/testimonials-slider";
+@use "components/vip-card";
+@use "components/photo-tile";
+@use "components/person-card";
+@use "components/reason-card";
+@use "components/chip";
+@use "components/error-hero";
+
+// ========================
+// Global Sections (повторяются на всех страницах)
+// ========================
+@use "sections/site-header";
+@use "sections/footer";
+
+// ========================
+// Page Sections / Core Blocks
+// ========================
+// Уникальные секции — главная, услуги, блог, отзывы и т.п.
+@use "sections/hero";
+@use "sections/search";
+@use "sections/services";
+@use "sections/country";
+@use "sections/tour";
+@use "sections/news";
+@use "sections/company";
+@use "sections/blog";
+@use "sections/faq";
+@use "sections/feedback";
+@use "sections/agencies";
+@use "sections/mango-intro";
+@use "sections/tour-stories";
+@use "sections/promo-video";
+@use "sections/agency-partners";
+@use "sections/client-reasons";
+@use "sections/team";
+@use "sections/cooperate-intro";
+@use "sections/reviews";
+@use "sections/contacts";
+
+// ========================
+// Utility Blocks & Extras
+// ========================
+@use "sections/info-highlights";
+@use "sections/content-section";
+@use "sections/telegram-banner";

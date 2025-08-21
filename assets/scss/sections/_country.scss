@@ -1,0 +1,69 @@
+@use "../base/media";
+@use "../tokens/breakpoints" as *;
+
+.country-catalog {
+  &__title {
+    font-size: clamp(2.5rem, 1.56vw + 2.13rem, 4rem);
+    line-height: 1.1;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    justify-items: center;
+    align-items: stretch;
+    gap: 20px;
+
+    .country-card {
+      width: 325px;
+      height: 325px;
+    }
+
+    .country-card__country-label {
+      font-size: 1.5rem;
+      line-height: 130%;
+    }
+
+    // -- DESKTOP: 3 columns (1024px..1439px) --
+    @include media.respond-between($bp-md, 1439px) {
+      grid-template-columns: repeat(3, 325px);
+      justify-content: center;
+    }
+
+    // -- TABLET: 2 columns (768px..1094px) --
+    @include media.respond-between($bp-sm, $bp-md-up - 1) {
+      grid-template-columns: repeat(2, 325px);
+      justify-content: center;
+    }
+
+    // -- MOBILE: 1 column (<768px) --
+    @include media.respond-max($bp-sm - 1) {
+      grid-template-columns: 1fr;
+      margin-top: 32px;
+    }
+  }
+}
+
+/* ===== Country Info (bottom) ===== */
+
+.feedback-country {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+
+  img {
+    width: 20px;
+    height: auto;
+  }
+}
+
+// Hide .country-form below md
+@include media.respond-max($bp-md) {
+  .country-form {
+    display: none;
+  }
+  .country-form--vacation-type .country-form__inner {
+    grid-template-columns: 1fr;
+  }
+}
